@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+em {
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+img {
+  border: none;
+  vertical-align: baseline;
+  display: block; }
+
+table {
+  border-collapse: collapse; }
+
+textarea {
+  resize: none;
+  overflow: hidden; }
+
+body {
+  font-family: '微软雅黑';
+  font-size: 14px;
+  box-sizing: border-box; }
+
+.ahover {
+  color: #d31b26 !important;
+  text-decoration: none !important; }
+
+header {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 28px;
+  background-color: #FAFAFA;
+  width: 100%; }
+  header #toubu {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto; }
+    header #toubu .topleft {
+      float: left; }
+      header #toubu .topleft li {
+        float: left;
+        font-size: 12px;
+        border-right: 1px solid #666666;
+        line-height: 12px;
+        margin-top: 10px;
+        margin-left: 10px; }
+        header #toubu .topleft li a {
+          margin: 10px;
+          text-decoration: none; }
+      header #toubu .topleft .welcome {
+        border: 0; }
+        header #toubu .topleft .welcome span {
+          color: #d41f2b;
+          margin-right: 5px; }
+        header #toubu .topleft .welcome a {
+          margin: 0; }
+      header #toubu .topleft .qklogins {
+        border-right: 0;
+        position: relative; }
+        header #toubu .topleft .qklogins .hover {
+          top: -5px;
+          background: url("../img/toubu/icon_top.png") no-repeat 0px -160px; }
+        header #toubu .topleft .qklogins b {
+          position: absolute;
+          right: -12px;
+          top: -8px;
+          z-index: 4900;
+          height: 26px;
+          width: 20px;
+          background: url("../img/toubu/icon_top.png") no-repeat 5px 11px; }
+        header #toubu .topleft .qklogins dd {
+          display: none;
+          position: absolute;
+          top: 17px;
+          right: -7px;
+          z-index: 4850;
+          width: 113px;
+          border: 1px solid #ccc;
+          background-color: #FFF; }
+          header #toubu .topleft .qklogins dd li {
+            float: none;
+            margin: 0;
+            width: 113px;
+            height: 26px;
+            line-height: 26px;
+            border-bottom: 1px solid #ccc;
+            background-color: #f0f0f0; }
+  header .topright {
+    float: right;
+    font-size: 12px; }
+    header .topright ul li {
+      margin-top: 10px;
+      line-height: 12px;
+      float: left; }
+      header .topright ul li span {
+        margin: 10px; }
+      header .topright ul li a {
+        margin: 10px;
+        text-decoration: none;
+        width: 50px; }
+        header .topright ul li a strong {
+          color: #D11D30; }
+    header .topright ul .xian {
+      border-right: 1px solid #666666; }
+
+/*
+	上面是头部的样式
+ */
+#daohang {
+  height: 98px;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative; }
+  #daohang .shopheader {
+    display: block;
+    position: absolute;
+    width: 193px;
+    height: 67px;
+    background: url("../img/toubu/toubu1.png");
+    left: 0;
+    top: 15px; }
+  #daohang .shopheadsearch {
+    position: absolute;
+    left: 210px;
+    top: 20px;
+    width: 460px;
+    height: 34px; }
+    #daohang .shopheadsearch .fdj {
+      background: url("../img/toubu/daohang.png");
+      width: 34px;
+      height: 34px;
+      z-index: -9999px;
+      float: left; }
+    #daohang .shopheadsearch .guanjian {
+      float: left;
+      height: 34px;
+      width: 340px;
+      color: #cccccc;
+      border-top: 2px solid #c20525;
+      border-bottom: 2px solid #c20525;
+      border-left: 0 none;
+      border-right: 0 none;
+      outline: none; }
+    #daohang .shopheadsearch .btn {
+      float: left;
+      width: 85px;
+      height: 34px;
+      background: url("../img/toubu/daohang.png") no-repeat right center;
+      text-indent: -9999px;
+      border: 0 none; }
+  #daohang .shopkeyword {
+    position: absolute;
+    left: 220px;
+    top: 56px; }
+    #daohang .shopkeyword a {
+      font-size: 12px;
+      color: #999;
+      margin-right: 10px;
+      text-decoration: none; }
+  #daohang .adver {
+    position: absolute;
+    right: 32px;
+    top: 18px;
+    width: 294px;
+    height: 60px; }
+    #daohang .adver a {
+      float: left;
+      text-decoration: none; }
+
+/*
+	导航栏css样式
+ */
+.shopnavwrap {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  background: #CF1B1B; }
+  .shopnavwrap .shopnav {
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 3000; }
+    .shopnavwrap .shopnav .yanse {
+      background-color: #A90A0A; }
+    .shopnavwrap .shopnav ul {
+      float: left; }
+      .shopnavwrap .shopnav ul li {
+        float: left;
+        margin: 0 10px;
+        font-size: 16px;
+        line-height: 35px; }
+        .shopnavwrap .shopnav ul li a {
+          color: #FAFAFA; }
+          .shopnavwrap .shopnav ul li a .hover {
+            color: #d31b26; }
+          .shopnavwrap .shopnav ul li a span {
+            padding: 0 24px 0 12px; }
+      .shopnavwrap .shopnav ul .jifen {
+        position: relative; }
+        .shopnavwrap .shopnav ul .jifen img {
+          position: absolute;
+          right: -20px;
+          top: -5px; }
+      .shopnavwrap .shopnav ul .jifen1 {
+        position: relative; }
+        .shopnavwrap .shopnav ul .jifen1 img {
+          position: absolute;
+          right: -20px;
+          top: -5px; }
+      .shopnavwrap .shopnav ul .a1 {
+        background-color: #A90A0A; }
+      .shopnavwrap .shopnav ul span {
+        float: left; }
+
+/*
+ 详情页样式
+ */
+.bdw {
+  background-color: #f7f7f7;
+  margin-top: -6px;
+  border-bottom: 1px solid #fff; }
+  .bdw .bd {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 40px; }
+    .bdw .bd .Products {
+      width: 958px;
+      margin-right: 0px;
+      margin-bottom: 15px;
+      margin-left: 0px;
+      background-color: #FFF;
+      float: left;
+      padding: 20px;
+      border: 1px solid #dddddd; }
+      .bdw .bd .Products .title {
+        margin-bottom: 10px;
+        padding-bottom: 5px; }
+        .bdw .bd .Products .title li {
+          font-size: 20px;
+          color: #333;
+          padding: 0px;
+          margin: 0px 0px 15px; }
+      .bdw .bd .Products .neirong1 .lefttu {
+        float: left;
+        width: 440px;
+        background-color: #FFF; }
+        .bdw .bd .Products .neirong1 .lefttu img {
+          width: 275px;
+          overflow: hidden; }
+      .bdw .bd .Products .neirong1 .rightnei {
+        float: right;
+        width: 460px;
+        color: #d71e2a;
+        background-color: #FFF; }
+        .bdw .bd .Products .neirong1 .rightnei .price h3 {
+          float: left;
+          margin-right: 5px; }
+        .bdw .bd .Products .neirong1 .rightnei .price strong {
+          font: 700 34px tahoma,sans-serif; }
+        .bdw .bd .Products .neirong1 .rightnei .price .jiaspan {
+          padding: 4px 0px 0px;
+          height: 18px;
+          display: block;
+          line-height: 18px;
+          font-size: 16px; }
+        .bdw .bd .Products .neirong1 .rightnei .price del {
+          display: block;
+          float: left;
+          color: #999;
+          font-weight: 700;
+          font-size: 12px; }
+        .bdw .bd .Products .neirong1 .rightnei .evaluate {
+          margin-top: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 1px solid #EEE;
+          border-bottom: 1px solid #EEE;
+          clear: both; }
+          .bdw .bd .Products .neirong1 .rightnei .evaluate .ealu {
+            color: #666;
+            font-size: 12px;
+            float: left; }
+            .bdw .bd .Products .neirong1 .rightnei .evaluate .ealu .star {
+              display: inline-block;
+              width: 60px;
+              height: 12px;
+              overflow: hidden;
+              background: url("../img/goods/star.png") no-repeat 0px 0px;
+              margin-right: 5px; }
+          .bdw .bd .Products .neirong1 .rightnei .evaluate .person {
+            float: right;
+            font-size: 12px; }
+            .bdw .bd .Products .neirong1 .rightnei .evaluate .person span {
+              color: #666; }
+        .bdw .bd .Products .neirong1 .rightnei .divder {
+          margin-bottom: 10px;
+          padding-bottom: 5px; }
+        .bdw .bd .Products .neirong1 .rightnei .buy {
+          position: relative; }
+          .bdw .bd .Products .neirong1 .rightnei .buy a {
+            display: block;
+            float: left; }
+          .bdw .bd .Products .neirong1 .rightnei .buy button {
+            margin-left: 10px;
+            border: 0;
+            display: inline-block;
+            text-indent: 169px;
+            overflow: hidden;
+            width: 129px;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 14px;
+            background-image: url("../img/goods/gw.jpg");
+            background-repeat: no-repeat; }
+        .bdw .bd .Products .neirong1 .rightnei .promise {
+          border-top: 1px solid #EEE;
+          margin-top: 10px;
+          padding-top: 5px; }
+          .bdw .bd .Products .neirong1 .rightnei .promise span {
+            margin-left: 10px;
+            display: inline-block;
+            font-size: 12px;
+            color: #666; }
+
+.gds-bigzoom img {
+  min-width: 1000px; }
+
+.ifoot {
+  width: 1000px;
+  margin: 0 auto; }
+  .ifoot .tao {
+    background: url("../img/neirong/xixian.jpg") no-repeat center center;
+    height: 19px; }
+    .ifoot .tao a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      line-height: 19px;
+      margin-left: 470px;
+      text-align: center; }
+  .ifoot .sort li {
+    width: 142px;
+    background: url("../img/dibu/xian.jpg") no-repeat right bottom;
+    height: 160px;
+    float: left;
+    margin: 0 10px; }
+    .ifoot .sort li p {
+      text-align: center;
+      font-family: "微软雅黑";
+      font-weight: bold; }
+    .ifoot .sort li img {
+      width: 141px;
+      height: 100px; }
+    .ifoot .sort li a {
+      display: block;
+      width: 65px;
+      height: 24px;
+      text-align: center;
+      float: left;
+      color: #5f5e5f; }
+
+/*
+ 底部样式
+ */
+.ftw {
+  width: 100%;
+  padding: 25px 0 50px 0;
+  background-color: #f7f7f7; }
+  .ftw .fw {
+    width: 1000px;
+    margin: 0 auto; }
+    .ftw .fw .fw_wrap {
+      height: 131px;
+      margin-bottom: 20px;
+      color: #999; }
+      .ftw .fw .fw_wrap .ft_h1 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h1 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px 0px; }
+        .ftw .fw .fw_wrap .ft_h1 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h2 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h2 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -50px; }
+        .ftw .fw .fw_wrap .ft_h2 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h3 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h3 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -100px; }
+        .ftw .fw .fw_wrap .ft_h3 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h4 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h4 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -150px; }
+        .ftw .fw .fw_wrap .ft_h4 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h5 {
+        float: left;
+        width: 252px;
+        height: 100%;
+        border-left: 1px solid #fdfdfd;
+        background: url("../img/dibu/xi.png") no-repeat center 35px;
+        color: #999; }
+        .ftw .fw .fw_wrap .ft_h5 h2 {
+          width: 178px;
+          font-size: 18px;
+          background: url("../img/dibu/ft.png") no-repeat 0px -200px;
+          margin-bottom: 20px; }
+          .ftw .fw .fw_wrap .ft_h5 h2 span {
+            font-size: 12px; }
+        .ftw .fw .fw_wrap .ft_h5 .phone {
+          width: 158px;
+          height: 5px;
+          line-height: 28px;
+          padding-top: 25px;
+          background-image: url("../img/dibu/tu.png");
+          margin: 0px auto 5px;
+          background-repeat: no-repeat;
+          background-position: 0px -154px; }
+      .ftw .fw .fw_wrap h2 {
+        width: 97px;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #c95c61; }
+        .ftw .fw .fw_wrap h2 li {
+          padding-left: 8px;
+          line-height: 22px; }
+      .ftw .fw .fw_wrap a {
+        color: #999;
+        text-decoration: none; }
+      .ftw .fw .fw_wrap .qqlian {
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold; }
+      .ftw .fw .fw_wrap .time {
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px; }
+  .ftw .ft_links {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #d31c28;
+    margin-bottom: 10px; }
+    .ftw .ft_links .ft_L {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff; }
+      .ftw .ft_links .ft_L a {
+        color: #fff;
+        padding: 0 10px; }
+  .ftw .ft_copy {
+    width: 1000px;
+    text-align: center;
+    color: #999;
+    line-height: 26px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 150px; }
+  .ftw .ft_cert {
+    width: 1000px;
+    text-align: center;
+    margin-left: 400px; }
+    .ftw .ft_cert a {
+      margin: 0 6px;
+      float: left; }
+      .ftw .ft_cert a img {
+        width: 111px;
+        height: 40px; }
+
+#rightbar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+  background-color: #FFF; }
+  #rightbar .geren a {
+    text-decoration: none; }
+  #rightbar .geren .heise {
+    position: absolute;
+    left: -36px;
+    top: 0px;
+    width: 36px;
+    height: 100%;
+    border-right: 1px solid #CECECE;
+    background-attachment: scroll;
+    background-color: #000000;
+    background-image: none;
+    background-repeat: repeat;
+    background-position: 0% 0%; }
+    #rightbar .geren .heise .yahei {
+      width: 36px;
+      position: absolute;
+      left: 0px;
+      top: 30%;
+      z-index: 10; }
+      #rightbar .geren .heise .yahei .beijing {
+        background-color: #a90a0a; }
+      #rightbar .geren .heise .yahei a {
+        text-align: center;
+        display: block;
+        color: #555;
+        position: relative;
+        margin-bottom: 10px;
+        padding-top: 8px;
+        padding-right: 4px;
+        padding-bottom: 8px;
+        padding-left: 4px; }
+        #rightbar .geren .heise .yahei a i {
+          display: block;
+          width: 25px;
+          height: 25px;
+          margin: 0px auto;
+          background-attachment: scroll;
+          background-color: transparent;
+          background-image: url("../img/gouwu/tubiao.png");
+          background-repeat: no-repeat; }
+        #rightbar .geren .heise .yahei a span {
+          margin-top: 5px;
+          display: block;
+          line-height: 20px;
+          font-family: "宋体";
+          color: #FFFFFF;
+          font-size: 12px; }
+        #rightbar .geren .heise .yahei a #BarCart {
+          display: inline-block;
+          width: 20px;
+          line-height: 20px;
+          border-radius: 50%;
+          color: #FFFFFF;
+          background-attachment: scroll;
+          background-color: #a90a0a;
+          background-image: none;
+          background-repeat: repeat;
+          background-position: 0% 0%;
+          margin-top: 3px; }
+        #rightbar .geren .heise .yahei a .n2 {
+          background-position: 0px -25px; }
+        #rightbar .geren .heise .yahei a .n3 {
+          background-position: 0px -50px; }
+        #rightbar .geren .heise .yahei a .n4 {
+          background-position: 0px -75px; }
+  #rightbar .right h4 {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd; }
+  #rightbar .right li {
+    position: relative;
+    border-bottom: 1px solid #ddd; }
+    #rightbar .right li span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 5px; }
+      #rightbar .right li span:hover {
+        background-color: #f00;
+        color: #fff; }
+  #rightbar .right img {
+    width: 50px; }
+
+.xixi {
+  background: #f7f7f7; }

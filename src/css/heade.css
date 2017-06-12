@@ -1,0 +1,1163 @@
+@charset "UTF-8";
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+em {
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+img {
+  border: none;
+  vertical-align: baseline;
+  display: block; }
+
+table {
+  border-collapse: collapse; }
+
+textarea {
+  resize: none;
+  overflow: hidden; }
+
+body {
+  font-family: '微软雅黑';
+  font-size: 14px;
+  box-sizing: border-box; }
+
+.ahover {
+  color: #d31b26 !important;
+  text-decoration: none !important; }
+
+header {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 28px;
+  background-color: #FAFAFA;
+  width: 100%; }
+  header #toubu {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto; }
+    header #toubu .topleft {
+      float: left; }
+      header #toubu .topleft li {
+        float: left;
+        font-size: 12px;
+        border-right: 1px solid #666666;
+        line-height: 12px;
+        margin-top: 10px;
+        margin-left: 10px; }
+        header #toubu .topleft li a {
+          margin: 10px;
+          text-decoration: none; }
+      header #toubu .topleft .welcome {
+        border: 0; }
+        header #toubu .topleft .welcome span {
+          color: #d41f2b;
+          margin-right: 5px; }
+        header #toubu .topleft .welcome a {
+          margin: 0; }
+      header #toubu .topleft .qklogins {
+        border-right: 0;
+        position: relative; }
+        header #toubu .topleft .qklogins .hover {
+          top: -5px;
+          background: url("../img/toubu/icon_top.png") no-repeat 0px -160px; }
+        header #toubu .topleft .qklogins b {
+          position: absolute;
+          right: -12px;
+          top: -8px;
+          z-index: 4900;
+          height: 26px;
+          width: 20px;
+          background: url("../img/toubu/icon_top.png") no-repeat 5px 11px; }
+        header #toubu .topleft .qklogins dd {
+          display: none;
+          position: absolute;
+          top: 17px;
+          right: -7px;
+          z-index: 4850;
+          width: 113px;
+          border: 1px solid #ccc;
+          background-color: #FFF; }
+          header #toubu .topleft .qklogins dd li {
+            float: none;
+            margin: 0;
+            width: 113px;
+            height: 26px;
+            line-height: 26px;
+            border-bottom: 1px solid #ccc;
+            background-color: #f0f0f0; }
+  header .topright {
+    float: right;
+    font-size: 12px; }
+    header .topright ul li {
+      margin-top: 10px;
+      line-height: 12px;
+      float: left; }
+      header .topright ul li span {
+        margin: 10px; }
+      header .topright ul li a {
+        margin: 10px;
+        text-decoration: none;
+        width: 50px; }
+        header .topright ul li a strong {
+          color: #D11D30; }
+    header .topright ul .xian {
+      border-right: 1px solid #666666; }
+
+/*
+	上面是头部的样式
+ */
+#daohang {
+  height: 98px;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative; }
+  #daohang .shopheader {
+    display: block;
+    position: absolute;
+    width: 193px;
+    height: 67px;
+    background: url("../img/toubu/toubu1.png");
+    left: 0;
+    top: 15px; }
+  #daohang .shopheadsearch {
+    position: absolute;
+    left: 210px;
+    top: 20px;
+    width: 460px;
+    height: 34px; }
+    #daohang .shopheadsearch .fdj {
+      background: url("../img/toubu/daohang.png");
+      width: 34px;
+      height: 34px;
+      z-index: -9999px;
+      float: left; }
+    #daohang .shopheadsearch .guanjian {
+      float: left;
+      height: 34px;
+      width: 340px;
+      color: #cccccc;
+      border-top: 2px solid #c20525;
+      border-bottom: 2px solid #c20525;
+      border-left: 0 none;
+      border-right: 0 none;
+      outline: none; }
+    #daohang .shopheadsearch .btn {
+      float: left;
+      width: 85px;
+      height: 34px;
+      background: url("../img/toubu/daohang.png") no-repeat right center;
+      text-indent: -9999px;
+      border: 0 none; }
+  #daohang .shopkeyword {
+    position: absolute;
+    left: 220px;
+    top: 56px; }
+    #daohang .shopkeyword a {
+      font-size: 12px;
+      color: #999;
+      margin-right: 10px;
+      text-decoration: none; }
+  #daohang .adver {
+    position: absolute;
+    right: 32px;
+    top: 18px;
+    width: 294px;
+    height: 60px; }
+    #daohang .adver a {
+      float: left;
+      text-decoration: none; }
+
+/*
+	导航栏css样式
+ */
+.shopnavwrap {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  background: #CF1B1B; }
+  .shopnavwrap .shopnav {
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 3000; }
+    .shopnavwrap .shopnav .yanse {
+      background-color: #A90A0A; }
+    .shopnavwrap .shopnav ul {
+      float: left; }
+      .shopnavwrap .shopnav ul li {
+        float: left;
+        margin: 0 10px;
+        font-size: 16px;
+        line-height: 35px; }
+        .shopnavwrap .shopnav ul li a {
+          color: #FAFAFA; }
+          .shopnavwrap .shopnav ul li a .hover {
+            color: #d31b26; }
+          .shopnavwrap .shopnav ul li a span {
+            padding: 0 24px 0 12px; }
+      .shopnavwrap .shopnav ul .jifen {
+        position: relative; }
+        .shopnavwrap .shopnav ul .jifen img {
+          position: absolute;
+          right: -20px;
+          top: -5px; }
+      .shopnavwrap .shopnav ul .jifen1 {
+        position: relative; }
+        .shopnavwrap .shopnav ul .jifen1 img {
+          position: absolute;
+          right: -20px;
+          top: -5px; }
+      .shopnavwrap .shopnav ul .a1 {
+        background-color: #A90A0A; }
+      .shopnavwrap .shopnav ul span {
+        float: left; }
+
+/*
+	信息栏的样式
+ */
+.banner {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 20px; }
+  .banner .lunbo {
+    width: 810px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: -10px; }
+    .banner .lunbo ul {
+      width: 3240px; }
+      .banner .lunbo ul li {
+        float: left; }
+
+/*
+	轮播图结构
+ */
+.contenter {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: "微软雅黑"; }
+  .contenter .one .title1 {
+    background: url("../img/neirong/hot_18.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .one .title1 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .one .title1 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .one .title1 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .one .title1 .list ul li a {
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .one .title1 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .one .title1 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .one .shangP .hover {
+    box-shadow: 0 0 15px #9A9A9A;
+    border: 1px solid #f6c688; }
+  .contenter .one .shangP li {
+    width: 298px;
+    height: 287px;
+    border: 1px solid #d7d3d3;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+    .contenter .one .shangP li a {
+      text-decoration: none; }
+      .contenter .one .shangP li a img {
+        width: 275px;
+        height: 185px; }
+    .contenter .one .shangP li .titlename {
+      font-size: 14px;
+      color: #343434; }
+    .contenter .one .shangP li h4 {
+      float: left; }
+      .contenter .one .shangP li h4 span {
+        color: #ff0000;
+        font-size: 14px;
+        font-style: normal;
+        float: left;
+        margin-top: 5px; }
+        .contenter .one .shangP li h4 span u {
+          color: #a49e9e;
+          text-decoration: line-through;
+          font-style: normal; }
+        .contenter .one .shangP li h4 span strong {
+          display: block;
+          font-size: 12px;
+          color: #a49e9e; }
+          .contenter .one .shangP li h4 span strong p {
+            font-weight: bold;
+            float: left; }
+      .contenter .one .shangP li h4 em {
+        font-size: 26px;
+        float: left; }
+        .contenter .one .shangP li h4 em p {
+          font-size: 22px;
+          color: #ff0000;
+          font-style: normal;
+          float: left; }
+        .contenter .one .shangP li h4 em i {
+          font-size: 26px;
+          font-family: "微软雅黑";
+          color: #ff0000;
+          margin-top: 3px;
+          font-style: normal; }
+    .contenter .one .shangP li button {
+      float: right;
+      width: 81px;
+      height: 27px;
+      background: url("../img/neirong/buy.jpg");
+      border: 0; }
+  .contenter .two .title2 {
+    background: url("../img/neirong/two.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .two .title2 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .two .title2 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .two .title2 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .two .title2 .list ul li a {
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .two .title2 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .two .title2 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .two .tcon {
+    margin-bottom: 20px; }
+    .contenter .two .tcon .tcon_left {
+      float: left;
+      width: 534px; }
+      .contenter .two .tcon .tcon_left .tu {
+        display: block; }
+        .contenter .two .tcon .tcon_left .tu img {
+          height: 288px; }
+    .contenter .two .tcon .tcon_right {
+      float: right;
+      width: 461px; }
+      .contenter .two .tcon .tcon_right .tr_le {
+        float: left;
+        width: 230px; }
+      .contenter .two .tcon .tcon_right .tr_rg {
+        float: right;
+        width: 230px; }
+      .contenter .two .tcon .tcon_right .tl1 {
+        font-size: 16px;
+        color: #222121;
+        text-align: center; }
+      .contenter .two .tcon .tcon_right .tl2 {
+        font-size: 14px;
+        color: #757575;
+        text-align: center; }
+      .contenter .two .tcon .tcon_right img {
+        width: 228px;
+        height: 232px; }
+    .contenter .two .tcon .clear {
+      clear: both;
+      overflow: hidden;
+      height: 0; }
+  .contenter .two .shangT {
+    padding-top: 20px; }
+    .contenter .two .shangT .hover {
+      box-shadow: 0 0 15px #9A9A9A;
+      border: 1px solid #f6c688; }
+    .contenter .two .shangT li {
+      width: 298px;
+      height: 287px;
+      border: 1px solid #d7d3d3;
+      padding: 10px 10px 0 10px;
+      margin-right: 20px;
+      float: left;
+      margin-bottom: 10px;
+      border-radius: 5px; }
+      .contenter .two .shangT li a {
+        text-decoration: none; }
+        .contenter .two .shangT li a img {
+          width: 275px;
+          height: 185px;
+          overflow: hidden; }
+      .contenter .two .shangT li .titlename {
+        font-size: 14px;
+        color: #343434; }
+      .contenter .two .shangT li h4 {
+        float: left; }
+        .contenter .two .shangT li h4 span {
+          color: #ff0000;
+          font-size: 14px;
+          font-style: normal;
+          float: left;
+          margin-top: 5px; }
+          .contenter .two .shangT li h4 span u {
+            color: #a49e9e;
+            text-decoration: line-through;
+            font-style: normal; }
+          .contenter .two .shangT li h4 span strong {
+            display: block;
+            font-size: 12px;
+            color: #a49e9e; }
+            .contenter .two .shangT li h4 span strong p {
+              font-weight: bold;
+              float: left; }
+        .contenter .two .shangT li h4 em {
+          font-size: 26px;
+          float: left; }
+          .contenter .two .shangT li h4 em p {
+            font-size: 22px;
+            color: #ff0000;
+            font-style: normal;
+            float: left; }
+          .contenter .two .shangT li h4 em i {
+            font-size: 26px;
+            font-family: "微软雅黑";
+            color: #ff0000;
+            margin-top: 3px;
+            font-style: normal; }
+      .contenter .two .shangT li button {
+        float: right;
+        width: 81px;
+        height: 27px;
+        background: url("../img/neirong/buy1.jpg");
+        border: 0; }
+  .contenter .three .title3 {
+    background: url("../img/neirong/three.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .three .title3 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .three .title3 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .three .title3 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .three .title3 .list ul li a {
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .three .title3 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .three .title3 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .three .tcon {
+    height: 293px;
+    margin-bottom: 20px; }
+    .contenter .three .tcon .tcon_left {
+      float: left;
+      width: 534px; }
+      .contenter .three .tcon .tcon_left .tu {
+        display: block; }
+        .contenter .three .tcon .tcon_left .tu img {
+          height: 288px; }
+    .contenter .three .tcon .tcon_right {
+      float: right;
+      width: 461px; }
+      .contenter .three .tcon .tcon_right .tr_le {
+        float: left;
+        width: 230px; }
+      .contenter .three .tcon .tcon_right .tr_rg {
+        float: right;
+        width: 230px; }
+      .contenter .three .tcon .tcon_right .tl1 {
+        font-size: 16px;
+        color: #222121;
+        text-align: center; }
+      .contenter .three .tcon .tcon_right .tl2 {
+        font-size: 14px;
+        color: #757575;
+        text-align: center; }
+      .contenter .three .tcon .tcon_right img {
+        width: 228px;
+        height: 232px; }
+  .contenter .three .shangH .hover {
+    box-shadow: 0 0 15px #9A9A9A;
+    border: 1px solid #f6c688; }
+  .contenter .three .shangH li {
+    width: 298px;
+    height: 287px;
+    border: 1px solid #d7d3d3;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+    .contenter .three .shangH li a {
+      text-decoration: none; }
+      .contenter .three .shangH li a img {
+        width: 275px;
+        height: 185px;
+        overflow: hidden; }
+    .contenter .three .shangH li .titlename {
+      font-size: 14px;
+      color: #343434; }
+    .contenter .three .shangH li h4 {
+      float: left; }
+      .contenter .three .shangH li h4 span {
+        color: #ff0000;
+        font-size: 14px;
+        font-style: normal;
+        float: left;
+        margin-top: 5px; }
+        .contenter .three .shangH li h4 span u {
+          color: #a49e9e;
+          text-decoration: line-through;
+          font-style: normal; }
+        .contenter .three .shangH li h4 span strong {
+          display: block;
+          font-size: 12px;
+          color: #a49e9e; }
+          .contenter .three .shangH li h4 span strong p {
+            font-weight: bold;
+            float: left; }
+      .contenter .three .shangH li h4 em {
+        font-size: 26px;
+        float: left; }
+        .contenter .three .shangH li h4 em p {
+          font-size: 22px;
+          color: #ff0000;
+          font-style: normal;
+          float: left; }
+        .contenter .three .shangH li h4 em i {
+          font-size: 26px;
+          font-family: "微软雅黑";
+          color: #ff0000;
+          margin-top: 3px;
+          font-style: normal; }
+    .contenter .three .shangH li button {
+      float: right;
+      width: 81px;
+      height: 27px;
+      background: url("../img/neirong/buy3.jpg");
+      border: 0; }
+  .contenter .four .title4 {
+    background: url("../img/neirong/four.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .four .title4 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .four .title4 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .four .title4 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .four .title4 .list ul li a {
+        color: #494747;
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .four .title4 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .four .title4 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .four .tcon {
+    height: 293px;
+    margin-bottom: 20px; }
+    .contenter .four .tcon .tcon_left {
+      float: left;
+      width: 534px; }
+      .contenter .four .tcon .tcon_left .tu {
+        display: block; }
+        .contenter .four .tcon .tcon_left .tu img {
+          height: 288px; }
+    .contenter .four .tcon .tcon_right {
+      float: right;
+      width: 461px; }
+      .contenter .four .tcon .tcon_right .tr_le {
+        float: left;
+        width: 230px; }
+      .contenter .four .tcon .tcon_right .tr_rg {
+        float: right;
+        width: 230px; }
+      .contenter .four .tcon .tcon_right .tl1 {
+        font-size: 16px;
+        color: #222121;
+        text-align: center; }
+      .contenter .four .tcon .tcon_right .tl2 {
+        font-size: 14px;
+        color: #757575;
+        text-align: center; }
+      .contenter .four .tcon .tcon_right img {
+        width: 228px;
+        height: 232px; }
+  .contenter .four .shangF .hover {
+    box-shadow: 0 0 15px #9A9A9A;
+    border: 1px solid #f6c688; }
+  .contenter .four .shangF li {
+    width: 298px;
+    height: 287px;
+    border: 1px solid #d7d3d3;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+    .contenter .four .shangF li a {
+      text-decoration: none; }
+      .contenter .four .shangF li a img {
+        width: 275px;
+        height: 185px;
+        overflow: hidden; }
+    .contenter .four .shangF li .titlename {
+      font-size: 14px;
+      color: #343434; }
+    .contenter .four .shangF li h4 {
+      float: left; }
+      .contenter .four .shangF li h4 span {
+        color: #ff0000;
+        font-size: 14px;
+        font-style: normal;
+        float: left;
+        margin-top: 5px; }
+        .contenter .four .shangF li h4 span u {
+          color: #a49e9e;
+          text-decoration: line-through;
+          font-style: normal; }
+        .contenter .four .shangF li h4 span strong {
+          display: block;
+          font-size: 12px;
+          color: #a49e9e; }
+          .contenter .four .shangF li h4 span strong p {
+            font-weight: bold;
+            float: left; }
+      .contenter .four .shangF li h4 em {
+        font-size: 26px;
+        float: left; }
+        .contenter .four .shangF li h4 em p {
+          font-size: 22px;
+          color: #ff0000;
+          font-style: normal;
+          float: left; }
+        .contenter .four .shangF li h4 em i {
+          font-size: 26px;
+          font-family: "微软雅黑";
+          color: #ff0000;
+          margin-top: 3px;
+          font-style: normal; }
+    .contenter .four .shangF li button {
+      float: right;
+      width: 81px;
+      height: 27px;
+      background: url("../img/neirong/buy1.jpg");
+      border: 0; }
+  .contenter .five .title5 {
+    background: url("../img/neirong/five.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .five .title5 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .five .title5 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .five .title5 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .five .title5 .list ul li a {
+        color: #494747;
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .five .title5 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .five .title5 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .five .tcon {
+    height: 293px;
+    margin-bottom: 20px; }
+    .contenter .five .tcon .tcon_left {
+      float: left;
+      width: 534px; }
+      .contenter .five .tcon .tcon_left .tu {
+        display: block; }
+        .contenter .five .tcon .tcon_left .tu img {
+          height: 288px; }
+    .contenter .five .tcon .tcon_right {
+      float: right;
+      width: 461px; }
+      .contenter .five .tcon .tcon_right .tr_le {
+        float: left;
+        width: 230px; }
+      .contenter .five .tcon .tcon_right .tr_rg {
+        float: right;
+        width: 230px; }
+      .contenter .five .tcon .tcon_right .tl1 {
+        font-size: 16px;
+        color: #222121;
+        text-align: center; }
+      .contenter .five .tcon .tcon_right .tl2 {
+        font-size: 14px;
+        color: #757575;
+        text-align: center; }
+      .contenter .five .tcon .tcon_right img {
+        width: 228px;
+        height: 232px; }
+  .contenter .five .shangFV .hover {
+    box-shadow: 0 0 15px #9A9A9A;
+    border: 1px solid #f6c688; }
+  .contenter .five .shangFV li {
+    width: 298px;
+    height: 287px;
+    border: 1px solid #d7d3d3;
+    padding: 10px 10px 0 10px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+    .contenter .five .shangFV li a {
+      text-decoration: none; }
+      .contenter .five .shangFV li a img {
+        width: 275px;
+        height: 185px;
+        overflow: hidden; }
+    .contenter .five .shangFV li .titlename {
+      font-size: 14px;
+      color: #343434; }
+    .contenter .five .shangFV li h4 {
+      float: left; }
+      .contenter .five .shangFV li h4 span {
+        color: #ff0000;
+        font-size: 14px;
+        font-style: normal;
+        float: left;
+        margin-top: 5px; }
+        .contenter .five .shangFV li h4 span u {
+          color: #a49e9e;
+          text-decoration: line-through;
+          font-style: normal; }
+        .contenter .five .shangFV li h4 span strong {
+          display: block;
+          font-size: 12px;
+          color: #a49e9e; }
+          .contenter .five .shangFV li h4 span strong p {
+            font-weight: bold;
+            float: left; }
+      .contenter .five .shangFV li h4 em {
+        font-size: 26px;
+        float: left; }
+        .contenter .five .shangFV li h4 em p {
+          font-size: 22px;
+          color: #ff0000;
+          font-style: normal;
+          float: left; }
+        .contenter .five .shangFV li h4 em i {
+          font-size: 26px;
+          font-family: "微软雅黑";
+          color: #ff0000;
+          margin-top: 3px;
+          font-style: normal; }
+    .contenter .five .shangFV li button {
+      float: right;
+      width: 81px;
+      height: 27px;
+      background: url("../img/neirong/buy1.jpg");
+      border: 0; }
+  .contenter .six .title6 {
+    background: url("../img/neirong/six.jpg") no-repeat;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px; }
+    .contenter .six .title6 .hot {
+      font-size: 18px;
+      margin-left: 55px;
+      float: left; }
+      .contenter .six .title6 .hot a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    .contenter .six .title6 .list ul li {
+      float: left;
+      margin-right: 10px; }
+      .contenter .six .title6 .list ul li a {
+        color: #494747;
+        font-size: 14px;
+        text-decoration: none; }
+        .contenter .six .title6 .list ul li a span {
+          font-weight: bold;
+          color: red; }
+    .contenter .six .title6 .list ul .jia {
+      margin-left: 26px; }
+  .contenter .six .tcon {
+    height: 293px;
+    margin-bottom: 20px; }
+    .contenter .six .tcon .tcon_left {
+      float: left;
+      width: 534px; }
+      .contenter .six .tcon .tcon_left .tu {
+        display: block; }
+        .contenter .six .tcon .tcon_left .tu img {
+          height: 288px; }
+    .contenter .six .tcon .tcon_right {
+      float: right;
+      width: 461px; }
+      .contenter .six .tcon .tcon_right .tr_le {
+        float: left;
+        width: 230px; }
+      .contenter .six .tcon .tcon_right .tr_rg {
+        float: right;
+        width: 230px; }
+      .contenter .six .tcon .tcon_right .tl1 {
+        font-size: 16px;
+        color: #222121;
+        text-align: center; }
+      .contenter .six .tcon .tcon_right .tl2 {
+        font-size: 14px;
+        color: #757575;
+        text-align: center; }
+      .contenter .six .tcon .tcon_right img {
+        width: 228px;
+        height: 232px; }
+
+/*
+ 内容结构的样式
+ */
+.ifoot {
+  width: 1000px;
+  margin: 0 auto; }
+  .ifoot .tao {
+    background: url("../img/neirong/xixian.jpg") no-repeat center center;
+    height: 19px; }
+    .ifoot .tao a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      line-height: 19px;
+      margin-left: 470px;
+      text-align: center; }
+  .ifoot .sort li {
+    width: 142px;
+    background: url("../img/dibu/xian.jpg") no-repeat right bottom;
+    height: 160px;
+    float: left;
+    margin: 0 10px; }
+    .ifoot .sort li p {
+      text-align: center;
+      font-family: "微软雅黑";
+      font-weight: bold; }
+    .ifoot .sort li img {
+      width: 141px;
+      height: 100px; }
+    .ifoot .sort li a {
+      display: block;
+      width: 65px;
+      height: 24px;
+      text-align: center;
+      float: left;
+      color: #5f5e5f; }
+
+/*
+ 底部样式
+ */
+.ftw {
+  width: 100%;
+  padding: 25px 0 50px 0;
+  background-color: #f7f7f7; }
+  .ftw .fw {
+    width: 1000px;
+    margin: 0 auto; }
+    .ftw .fw .fw_wrap {
+      height: 131px;
+      margin-bottom: 20px;
+      color: #999; }
+      .ftw .fw .fw_wrap .ft_h1 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h1 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px 0px; }
+        .ftw .fw .fw_wrap .ft_h1 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h2 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h2 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -50px; }
+        .ftw .fw .fw_wrap .ft_h2 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h3 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h3 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -100px; }
+        .ftw .fw .fw_wrap .ft_h3 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h4 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h4 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -150px; }
+        .ftw .fw .fw_wrap .ft_h4 ul {
+          margin-left: 60px; }
+      .ftw .fw .fw_wrap .ft_h5 {
+        float: left;
+        width: 252px;
+        height: 100%;
+        border-left: 1px solid #fdfdfd;
+        background: url("../img/dibu/xi.png") no-repeat center 35px;
+        color: #999; }
+        .ftw .fw .fw_wrap .ft_h5 h2 {
+          width: 178px;
+          font-size: 18px;
+          background: url("../img/dibu/ft.png") no-repeat 0px -200px;
+          margin-bottom: 20px; }
+          .ftw .fw .fw_wrap .ft_h5 h2 span {
+            font-size: 12px; }
+        .ftw .fw .fw_wrap .ft_h5 .phone {
+          width: 158px;
+          height: 28px;
+          line-height: 28px;
+          padding-top: 25px;
+          background-image: url("../img/dibu/tu.png");
+          margin: 0px auto 5px;
+          background-repeat: no-repeat;
+          background-position: 0px -154px; }
+      .ftw .fw .fw_wrap h2 {
+        width: 97px;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #c95c61; }
+        .ftw .fw .fw_wrap h2 li {
+          padding-left: 8px;
+          line-height: 22px; }
+      .ftw .fw .fw_wrap a {
+        color: #999;
+        text-decoration: none; }
+      .ftw .fw .fw_wrap .qqlian {
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold; }
+      .ftw .fw .fw_wrap .time {
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px; }
+  .ftw .ft_links {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #d31c28;
+    margin-bottom: 10px; }
+    .ftw .ft_links .ft_L {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff; }
+      .ftw .ft_links .ft_L a {
+        color: #fff;
+        padding: 0 10px; }
+  .ftw .ft_copy {
+    width: 1000px;
+    text-align: center;
+    color: #999;
+    line-height: 26px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 150px; }
+  .ftw .ft_cert {
+    width: 1000px;
+    text-align: center;
+    margin-left: 400px; }
+    .ftw .ft_cert a {
+      margin: 0 6px;
+      float: left; }
+      .ftw .ft_cert a img {
+        width: 111px;
+        height: 40px; }
+
+/*
+ 友情链接样式
+ */
+.xixi {
+  background: #f7f7f7; }
+
+#LoutiNav {
+  width: 95px;
+  border: 1px solid #ddd;
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+  #LoutiNav ul li .tu1 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu2 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu3 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu4 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu5 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu6 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu7 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu8 {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #e6e6e6; }
+  #LoutiNav ul li .tu {
+    display: block;
+    width: 95px;
+    height: 40px;
+    border: 1px solid #FF0004; }
+
+/*
+	楼梯效果样式
+	
+ */
+#rightbar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+  background-color: #FFF; }
+  #rightbar .geren {
+    position: fixed;
+    width: 36px;
+    height: 100%;
+    float: left;
+    top: 0px;
+    z-index: 1200; }
+    #rightbar .geren a {
+      text-decoration: none; }
+    #rightbar .geren .heise {
+      position: absolute;
+      left: -36px;
+      top: 0px;
+      width: 36px;
+      height: 100%;
+      border-right: 1px solid #CECECE;
+      background-attachment: scroll;
+      background-color: #000000;
+      background-image: none;
+      background-repeat: repeat;
+      background-position: 0% 0%; }
+      #rightbar .geren .heise .yahei {
+        width: 36px;
+        position: absolute;
+        left: 0px;
+        top: 30%;
+        z-index: 10; }
+        #rightbar .geren .heise .yahei .beijing {
+          background-color: #a90a0a; }
+        #rightbar .geren .heise .yahei a {
+          text-align: center;
+          display: block;
+          color: #555;
+          position: relative;
+          margin-bottom: 10px;
+          padding-top: 8px;
+          padding-right: 4px;
+          padding-bottom: 8px;
+          padding-left: 4px; }
+          #rightbar .geren .heise .yahei a i {
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin: 0px auto;
+            background-attachment: scroll;
+            background-color: transparent;
+            background-image: url("../img/gouwu/tubiao.png");
+            background-repeat: no-repeat; }
+          #rightbar .geren .heise .yahei a span {
+            margin-top: 5px;
+            display: block;
+            line-height: 20px;
+            font-family: "宋体";
+            color: #FFFFFF;
+            font-size: 12px; }
+          #rightbar .geren .heise .yahei a #BarCart {
+            display: inline-block;
+            width: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+            color: #FFFFFF;
+            background-attachment: scroll;
+            background-color: #a90a0a;
+            background-image: none;
+            background-repeat: repeat;
+            background-position: 0% 0%;
+            margin-top: 3px; }
+          #rightbar .geren .heise .yahei a .n2 {
+            background-position: 0px -25px; }
+          #rightbar .geren .heise .yahei a .n3 {
+            background-position: 0px -50px; }
+          #rightbar .geren .heise .yahei a .n4 {
+            background-position: 0px -75px; }
+  #rightbar .right {
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: url("../img/gouwu/666.gif");
+    background-repeat: no-repeat;
+    background-position: 45% center;
+    width: 260px;
+    overflow: auto;
+    height: 100%; }

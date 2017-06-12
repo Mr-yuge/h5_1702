@@ -1,0 +1,296 @@
+@charset "UTF-8";
+em {
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: blue; }
+
+img {
+  border: none;
+  vertical-align: baseline;
+  display: block; }
+
+table {
+  border-collapse: collapse; }
+
+textarea {
+  resize: none;
+  overflow: hidden; }
+
+.reg_wrap {
+  font-size: 12px;
+  font-family: "Microsoft Yahei","Arial","Verda","tahoma";
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f1f4;
+  width: 100%; }
+  .reg_wrap .content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 25px 0 100px;
+    font-family: "Arial"; }
+    .reg_wrap .content .tou {
+      width: 445px; }
+      .reg_wrap .content .tou .reg_logo {
+        float: left;
+        display: block;
+        width: 227px;
+        height: 67px;
+        background: url("../img/longin/denglu.png") no-repeat; }
+      .reg_wrap .content .tou .reg_login_btn {
+        float: right;
+        width: 143px;
+        height: 45px;
+        background: url("../img/longin/xinxi.png") no-repeat 0px -190px;
+        margin: 45px 0 0 70px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 32px; }
+        .reg_wrap .content .tou .reg_login_btn span {
+          color: #fffaa8; }
+    .reg_wrap .content .zhong {
+      width: 441px;
+      border: 1px solid #e1e0e2;
+      background-color: #f9f8fa;
+      padding: 1px;
+      border-radius: 5px;
+      float: left; }
+      .reg_wrap .content .zhong .box {
+        width: 437px;
+        background-color: #eeecef;
+        padding: 20px;
+        font-size: 14px;
+        border-radius: 5px; }
+        .reg_wrap .content .zhong .box .wcm {
+          background: url("../img/longin/huiyuan.png") no-repeat 0px 0px;
+          width: 387px;
+          padding-left: 80px;
+          height: 36px;
+          line-height: 30px;
+          font-size: 12px;
+          color: #000;
+          margin-bottom: 20px; }
+        .reg_wrap .content .zhong .box #myform dt {
+          float: left;
+          clear: left;
+          width: 90px;
+          padding: 3px;
+          text-align: right;
+          color: #555;
+          line-height: 36px;
+          font-weight: normal; }
+        .reg_wrap .content .zhong .box #myform #username, .reg_wrap .content .zhong .box #myform #password, .reg_wrap .content .zhong .box #myform #email, .reg_wrap .content .zhong .box #myform #password1 {
+          float: left;
+          background-color: #fff;
+          border: 1px solid #e5e3e5;
+          width: 240px;
+          height: 34px;
+          padding: 3px;
+          line-height: 30px;
+          color: #808080;
+          border-radius: 5px;
+          font-size: 14px;
+          margin-top: 4px; }
+        .reg_wrap .content .zhong .box #myform label {
+          font-weight: normal; }
+        .reg_wrap .content .zhong .box #myform dd {
+          float: left;
+          width: 290px;
+          padding: 3px;
+          line-height: 36px;
+          position: relative; }
+          .reg_wrap .content .zhong .box #myform dd .tip {
+            float: left;
+            display: inline-block;
+            width: 21px;
+            height: 36px;
+            background: url("../img/longin/R_W.png") no-repeat 0px -222px;
+            margin: 0 5px; }
+          .reg_wrap .content .zhong .box #myform dd .tib {
+            float: left;
+            display: inline-block;
+            width: 21px;
+            height: 36px;
+            background: url("../img/longin/R_W.png") no-repeat 0px -182px;
+            margin: 0 5px; }
+        .reg_wrap .content .zhong .box #myform p {
+          clear: left;
+          font-size: 12px;
+          color: #d21522;
+          height: 0px;
+          line-height: 20px;
+          position: absolute;
+          top: 37px; }
+        .reg_wrap .content .zhong .box #myform .jie {
+          font-size: 12px;
+          font-weight: normal; }
+        .reg_wrap .content .zhong .box #myform a {
+          text-decoration: none;
+          color: #d41f2b; }
+        .reg_wrap .content .zhong .box #myform button {
+          width: 150px;
+          height: 62px;
+          border: none;
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          color: #fff;
+          margin-right: 10px;
+          cursor: pointer;
+          background: url("../img/longin/xinxi.png") no-repeat;
+          outline: none; }
+        .reg_wrap .content .zhong .box input {
+          outline: none; }
+        .reg_wrap .content .zhong .box .hezuo {
+          padding: 10px 0; }
+          .reg_wrap .content .zhong .box .hezuo h4 {
+            font-size: 12px;
+            color: #000;
+            margin-bottom: 10px; }
+          .reg_wrap .content .zhong .box .hezuo img {
+            width: 87px;
+            height: 26px;
+            margin: 0 5px 10px 0;
+            vertical-align: middle;
+            float: left; }
+    .reg_wrap .content .right {
+      float: right;
+      width: 500px;
+      padding-top: 14px;
+      text-align: center; }
+    .reg_wrap .content .clearfix {
+      zoom: 1; }
+
+/*
+ 底部样式
+ */
+.ftw {
+  width: 100%;
+  padding: 25px 0 50px 0;
+  background-color: #f7f7f7; }
+  .ftw a {
+    font-size: 12px; }
+  .ftw .fw {
+    width: 1000px;
+    margin: 0 auto; }
+    .ftw .fw .fw_wrap {
+      height: 131px;
+      margin-bottom: 20px;
+      color: #999; }
+      .ftw .fw .fw_wrap .ft_h1 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h1 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px 0px; }
+      .ftw .fw .fw_wrap .ft_h2 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h2 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -50px; }
+      .ftw .fw .fw_wrap .ft_h3 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h3 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -100px; }
+      .ftw .fw .fw_wrap .ft_h4 {
+        float: left;
+        width: 185px;
+        height: 130px;
+        border-right: 1px solid #e9e1e8; }
+        .ftw .fw .fw_wrap .ft_h4 h2 {
+          background: url("../img/dibu/ft.png") no-repeat 0px -150px; }
+      .ftw .fw .fw_wrap .ft_h5 {
+        float: left;
+        width: 252px;
+        height: 100%;
+        border-left: 1px solid #fdfdfd;
+        background: url("../img/dibu/xi.png") no-repeat center 35px;
+        color: #999; }
+        .ftw .fw .fw_wrap .ft_h5 h2 {
+          width: 178px;
+          font-size: 18px;
+          background: url("../img/dibu/ft.png") no-repeat 0px -200px;
+          margin-bottom: 20px; }
+          .ftw .fw .fw_wrap .ft_h5 h2 span {
+            font-size: 12px; }
+        .ftw .fw .fw_wrap .ft_h5 .phone {
+          width: 158px;
+          height: 28px;
+          line-height: 28px;
+          padding-top: 25px;
+          background-image: url("../img/dibu/tu.png");
+          margin: 0px auto 5px;
+          background-repeat: no-repeat;
+          background-position: 0px -154px; }
+      .ftw .fw .fw_wrap h2 {
+        width: 97px;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #c95c61; }
+        .ftw .fw .fw_wrap h2 li {
+          padding-left: 8px;
+          line-height: 22px; }
+      .ftw .fw .fw_wrap a {
+        color: #999;
+        text-decoration: none; }
+      .ftw .fw .fw_wrap .qqlian {
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold; }
+      .ftw .fw .fw_wrap .time {
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px; }
+  .ftw .ft_links {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background-color: #d31c28;
+    margin-bottom: 10px; }
+    .ftw .ft_links .ft_L {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff; }
+      .ftw .ft_links .ft_L a {
+        color: #fff;
+        padding: 0 10px; }
+  .ftw .ft_copy {
+    width: 1000px;
+    text-align: center;
+    color: #999;
+    line-height: 26px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 150px; }
+  .ftw .ft_cert {
+    width: 1000px;
+    text-align: center;
+    margin-left: 400px; }
+    .ftw .ft_cert a {
+      margin: 0 6px;
+      float: left; }
+      .ftw .ft_cert a img {
+        width: 111px;
+        height: 40px; }
+
+.box6 {
+  background: #f7f7f7; }
