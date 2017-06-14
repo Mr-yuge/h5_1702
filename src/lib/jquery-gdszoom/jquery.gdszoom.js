@@ -31,7 +31,9 @@
 			var bigUrl = $smallImg.data('big');//$smallImg.attr('data-big')
 			var $big = $('<div/>').addClass('gds-bigzoom');
 			var $bigImg = $('<img/>').attr('src',bigUrl);
-
+			console.log($bigImg);
+			console.log($smallImg);
+			console.log($(this))
 			// 计算大图与小图的比率
 			// $bigImg[0].onload = function(){
 				
@@ -68,7 +70,7 @@
 
 			// 生成放大镜
 			var $minzoom = $('<span/>').addClass('minzoom');
-			$minzoom.appendTo($small);
+			$small.append($minzoom);
 
 			
 

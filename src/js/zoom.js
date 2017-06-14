@@ -47,7 +47,7 @@ require(['config'],function(){
 		var qty1;
 		$.ajax({
 			url:'../api/getlist.php',
-			
+			async:false,
 			success:function(res){
 				var $list = JSON.parse(res);
 				$indext = $list;
@@ -136,11 +136,7 @@ require(['config'],function(){
 			);
 
 
-		$('.imgtu').gdszoom({
-			height:280,
-			 width:320,
-			 position:'right'
-		});
+		
 
 
 		var qfy = 1;
@@ -247,7 +243,7 @@ require(['config'],function(){
                		return `<li data-guid=${item.guid}>
 								<img src="${item.imgurl}">
 								<p>${item.name}</p>
-								<h4>￥${item.price}&times;<h3 class="dange">${item.qty}</h3></h4>
+								<h4>￥${item.price}&times;${item.qty}</h4>
 								<span class="btn-close">&times;</span>
 
 
@@ -287,26 +283,7 @@ require(['config'],function(){
 		
 		});
 
-		var xixi =$('.haha');
-
-		xixi.on('click',function(){
-			var $culist = this.parentNode;
-			
 		
-			var guid = $culist.getAttribute('data-guid');
-				
-			for(var i=0;i<goodslist.length;i++){
-				if(goodslist[i].guid === guid){
-					
-					goodslist.splice(i,1);
-					setCookie('goodslist',JSON.stringify(goodslist),'Session','/');
-					
-					break;
-				}
-			}
-
-			$culist.remove();
-		})
 
 
 
@@ -364,24 +341,72 @@ require(['config'],function(){
 		$datalist.html($goshop).append($tr);
 		
 
-		
-		
-		var xiaoji = $('.xiaoji');
 		var reduce = $('.reduce');
 		var syQty;
 		var jiaQty;
+		var shanQty;
 		var qian = $('.qian');
 		var total = $('.total');
 		var $total1;
 		var $total2;
+		var $total3;
+		var $srong =$('.shuL');
+		var xixi =$('.haha');
+		console.log($('.haha'))
+		xixi.on('click',function(){
+			$total3 = 0;
+			shanQty=0;
+			var $culist = this.parentNode.parentNode;
+			var $next = $(this).prev();
+			// var $culist = this.parentNode.parentNode.parentNode;
+			var xiaoji = this.parentNode.parentNode;
+			
+			var guid = $culist.getAttribute('data-id');
+			console.log(guid);
+			for(var i=0;i<goodslist.length;i++){
+				if(goodslist[i].guid === guid){
+					
+					goodslist.splice(i,1);
+					setCookie('goodslist',JSON.stringify(goodslist),'Session','/');
+					
+					break;
+				}
+			}
+
+
+			for(var i=0;i<goodslist.length;i++){
+					shanQty +=goodslist[i].qty ;
+					$total3+= goodslist[i].price * goodslist[i].qty;
+
+				}
+				
+				qian.html(shanQty);
+				total.html($total3.toFixed(2)*1);
+				
+				$idx.text(shanQty);
+				$topright.text(jiaQty);
+				$srong.html(shanQty);
+			$culist.remove();
+		})
+
+
+
+
+		
+		
+		// var xiaoji = $('.xiaoji');
+		
 		reduce.on('click',function(){
 			syQty = 0;
 			$total1 = 0;
 			var $next = $(this).next();
-			// console.log($next);
+			var xiaoji = this.parentNode.parentNode;
+			var xiaoji1 = $(xiaoji).next().next().next();
+			
 			var $culist = this.parentNode.parentNode.parentNode;
+
 			var jisuan = $culist.children;
-			console.log(jisuan);
+			
 			
 			var guid = $culist.getAttribute('data-id');
 				for(var i=0;i<goodslist.length;i++){
@@ -392,7 +417,7 @@ require(['config'],function(){
 						
 						setCookie('goodslist',JSON.stringify(goodslist),'Session','/');
 						$next.val(goodslist[i].qty);
-						// xiaoji.html(goods.price*goodslist[i].qty)
+						xiaoji1.html((goodslist[i].qty*goodslist[i].price).toFixed(2)*1);
 						break;
 					}
 				}	
@@ -424,7 +449,8 @@ require(['config'],function(){
 			jiaQty=0;
 			var $next = $(this).prev();
 			var $culist = this.parentNode.parentNode.parentNode;
-				
+			var xiaoji = this.parentNode.parentNode;
+			var xiaoji1 = $(xiaoji).next().next().next();
 	
 			var guid = $culist.getAttribute('data-id');
 				for(var i=0;i<goodslist.length;i++){
@@ -433,6 +459,7 @@ require(['config'],function(){
 						goodslist[i].qty++;
 						setCookie('goodslist',JSON.stringify(goodslist),'Session','/');
 						$next.val(goodslist[i].qty);
+						xiaoji1.html((goodslist[i].qty*goodslist[i].price).toFixed(2)*1);
 						break;
 					}
 				}
@@ -445,8 +472,7 @@ require(['config'],function(){
 				
 				qian.html(jiaQty);
 				total.html($total1.toFixed(2)*1);
-				console.log($idx,$topright);
-				console.log(syQty)
+				
 				$idx.text(jiaQty);
 				$topright.text(jiaQty);
 		});
@@ -548,5 +574,12 @@ require(['config'],function(){
 				$(this).removeClass('abchover');
 			}
 			)
+
+
+		$('.imgtu').gdszoom({
+			height:280,
+			 width:320,
+			 position:'right'
+		});
 	});
 })

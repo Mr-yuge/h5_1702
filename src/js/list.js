@@ -75,7 +75,7 @@ require(['config'],function(){
 				}
 				
 			);
-		console.log(b)
+	
 		//轮播图的插件
 		$('.lunbo').lxCarousel({
 			imgs:['img/toubu/001.jpg','img/toubu/002.jpg','img/toubu/003.jpg','img/toubu/004.jpg'],
@@ -83,7 +83,7 @@ require(['config'],function(){
 			height:320
 
 		});
-		// console.log($.lxCarousel())
+		
 
 		$('.shopnav li').hover(
 			function(){
@@ -798,7 +798,7 @@ require(['config'],function(){
 			// console.log($next);
 			var $culist = this.parentNode.parentNode.parentNode;
 			var jisuan = $culist.children;
-			console.log(jisuan);
+			
 			
 			var guid = $culist.getAttribute('data-id');
 				for(var i=0;i<goodslist.length;i++){
@@ -863,8 +863,7 @@ require(['config'],function(){
 			$culist.remove();
 		
 		})
-		console.log(666)
-		console.log($('.qklogins'))
+	
 		$('.qklogins').on('mouseenter','dd',function(){
 			$(this).show();
 		}).on('mouseleave','dd',function(){

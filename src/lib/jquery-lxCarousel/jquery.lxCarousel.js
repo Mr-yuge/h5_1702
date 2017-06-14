@@ -33,6 +33,7 @@
 			// 生成图片结构
 			var $ul = $('<ul/>');
 			$ul.html($.map(opt.imgs,function(item,idx){
+				
 				return `<li><img src="${item}"></li>`;
 			}).join(''));
 
@@ -56,6 +57,7 @@
 
 			show();
 			function show(){
+				clearInterval(time);
 				time = setInterval(function(){
 				index++;
 
