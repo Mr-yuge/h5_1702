@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>步淘网首页</title>
+	<title>购物车</title>
 	<!-- 头部的css样式链接 -->
 	
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="../css/details.css">
-	<link rel="stylesheet" href="../lib/jquery-gdszoom/jquery.gdszoom.css">
+	<link rel="stylesheet" href="../css/amount.css">
+	<!-- <link rel="stylesheet" href="../lib/jquery-gdszoom/jquery.gdszoom.css"> -->
 	<script src="../js/require.js" data-main='../js/zoom.js'></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
 				<ul>
 					<li><a href="#">收藏步淘</a></li>
 					<li class="welcome">您好，欢迎来到步淘生活商城！ 
-					<a href="../html/Landed.html">请登录</a></li>
+					<a href="http://localhost:3000/html/Landed.html">请登录</a></li>
 					<li><a href="#">注册有礼</a></li>
 
 					<li id="qkln" class="qklogins clearfix"><a href="#">快捷登录<b class></b></a>
@@ -37,7 +37,7 @@
 			<div class="topright">
 				<ul>
 					<li class="xian"><span>400-680-2212</span></li>
-					<li><a href="amount.html">购物车：<strong>0</strong>件商品</a></li>
+					<li><a href="#">购物车：<strong>0</strong>件商品</a></li>
 					<li class="xian"><a href="#">我的步淘<b class></b></a></li>
 
 					<li><a href="#">关注我们
@@ -51,7 +51,7 @@
 	<!-- 标题 -->
 	<div id="daohang">
 		
-			<a href="../index.html" class="shopheader"></a>
+			<a href="#" class="shopheader"></a>
 			<div class="shopheadsearch"><form action="../index.php">
 				<div class="fdj">
 					
@@ -104,67 +104,49 @@
 	</div>
 	<!-- 信息栏 -->
 	
-	<div class="bdw">
+	
+
+
+	<div id="bdw">
 		<div class="bd">
-			<div class="box1 clearfix" style="padding-top:0px;">
-				<div class="Products">
-					<div class="title">
-					<ul>
-						<li><p></p></li>
+			<div class="shopping">
+				<div class="shop">
+					<ul class="clearfix">
+						<li class="mu01">购物车下单</li>
+						<li class="mu02">在线支付</li>
+						<li class="mu03">下单成功</li>
 					</ul>
-					</div>
-					<div class="neirong1">
-						<div class="lefttu">
-							<div class="imgtu">
+				</div>
+				<div id="datalist">
+					
+						<table class="shoptable" cellspacing="0"  border="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th colspan="2">商品</th>
+									<th width="120">数量（件）</th>
+									<th width="100">单价（元）</th>
+									<th width="100">优惠（元）</th>
+									<th width="100">小计（元）</th>
+									<th width="80">操作</th>
+								</tr>
+							</thead>
+							<tbody>
 								
-							</div>
-						</div>
-						<div class="rightnei">
-							<div class="price">
-								<h3>
-									￥
-									<strong></strong>
-								</h3>
-									<span class="jiaspan"></span>
-
-								<del></del>
-							</div>
-							<div class="evaluate clearfix">
-								<div class="ealu">
-									商品评价：
-								
-									<span class="star">
-										
-									</span>
-									5分
-								</div>
-								<div class="person">
-									0<span>人评价</span>
-								</div>
-
-							</div>
-
-							<div class="divder">
-								
-							</div>
-							<div class="buy">
-								<a href="#"><img src="../img/goods/buy.jpg" alt=""></a>
-								<button></button>
-							</div>
-							<div class="promise">
-									<span>服务承诺</span>
-									<span>正品保证</span>
-									<span>七天无理由退换</span>
-									<span>送iPad Air 赢积分</span>
-							</div>
-						</div>
-					</div>
+							</tbody>
+						</table>
+					
+				</div>
+				<div class="clear clearfix">
+					<button class="btn1"></button>
+					<button class="btn2"></button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 
+
+	<!-- <div style="height: 100px,width: 100%;"></div> -->
 	<!-- 购物车弹框 -->
 	<!-- <div id="dialog">
 		<div class="shop">

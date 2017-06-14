@@ -255,267 +255,147 @@ header{
 
 
 
-
-#dialog{
-	    border: 4px solid #CCC;
-	    position: fixed;
-	    top:0;
-	    left:0;
-	      // position: absolute;
-	      .shop{
-	      	width: 550px;
-   			 border: 2px solid #d11824;
-   			 .title{
-   			 	    height: 38px;
-				    line-height: 20px;
-				    background-color: #f7f4f7;
-				    border-bottom: 1px solid #d9d9d9;
-				    padding: 10px;
-				    h2{
-				    	    float: left;
-						    font-size: 14px;
-						    font-weight: bold;
-						    color: #d11824;
-				    }
-				    span{
-				    	    float: right;
-						    display: inline-block;
-						    width: 18px;
-						    height: 17px;
-						    background: url('../img/gouwu/close.png') no-repeat left center;
-						    cursor: pointer;
-						    text-indent: -9999px;
-				    }
-   			 }
-   			
-	      }
-	      .count{
-   				background-color: #FFF;
-    			padding-top: 20px;
-    			padding-bottom:20px;
-    			.select{
-    				width: 500px;
-				    margin: 20px;
-				    margin-top: 0;
-				    dt{
-						width: 500px;
-					    color: #000;
-					    margin-bottom: 5px;
-					    line-height: 22px;
-				    }
-				    dd{
-					    width: 500px;
-	   					margin-bottom: 10px;
-	   					display:block;
-   						.num{
-   							display: block;
-  							  height: 26px;
-   						}
-   						.add,.reduce{
-   							text-align: center;
-						    width: 12px;
-						    height: 22px;
-						    border: 1px solid #ccc;
-						    line-height: 22px;
-						    background-color: #CCC;
-						    float: left;
-   						}
-   						.inp{
-   							float: left;
-   							    background-color: #fff;
-						    border: 1px solid #ccc;
-						    height: 22px;
-						    line-height: 18px;
-						    padding: 1px 3px;
-						    font-family: Tahoma;
-						    font-size: 12px;
-   							width: 40px;
-   						}
-
-   						 li{
-   						 	float: left;
-						    margin-right: 20px;
-						    margin-bottom: 10px;
-						    border: 1px solid #dedede;
-						    padding: 3px 6px;
-						    line-height: 20px;
-						      color: #555;
-						    white-space: nowrap;
-						    cursor: pointer;
-   						 }
-				    }
-				    .btn{
-				    	float: left;
-					    width: 110px;
-					    height: 33px;
-					    line-height: 33px;
-					    border: none;
-					    background: url('../img/gouwu/shop1.png') no-repeat 0px 0px;
-					    cursor: pointer;
-					    text-indent: -9999px;
-				    }
-				    .btn1{
-				    	    float: right;
-						    width: 110px;
-						    height: 33px;
-						    line-height: 33px;
-						    border: none;
-						    background: url('../img/gouwu/shop2.png') no-repeat 0px -33px;
-						    cursor: pointer;
-						    text-indent: -9999px;
-				    }
-    			}
-   			}
-}
-/*
- 详情页样式
- */
 .bdw{
-	background-color: #f7f7f7;
+	
     margin-top: -6px;
-     border-bottom:1px solid #fff;
 	.bd{
-	    width: 1000px;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 40px;
-		.Products{
-			// font-size: 12px;
-		    width: 958px;
-		    margin-right: 0px;
-		    margin-bottom: 15px;
-		    margin-left: 0px;
-		    background-color: #FFF;
-		    float: left;
-		    padding: 20px;
-		    border: 1px solid #dddddd;
-		    .title{
-				    margin-bottom: 10px;
-   					 padding-bottom: 5px;
-			    	li{
-			    		font-size: 20px;
-				    	color: #333;
-				    	padding: 0px;
-				    	margin: 0px 0px 15px;
-					}
-		    }
-		    .neirong1{
-		    	.lefttu{
-					    float: left;
-					   
-					    width: 440px;
-					    background-color: #FFF;
-						img{
-							 width:275px;  overflow:hidden
-						}
-		    	}
-		    	.rightnei{
-					    float: right;
-					    width: 460px;
-					    color: #d71e2a;
-					    background-color: #FFF;
-					  .price{
-						  	h3{
-						   		float:left;
-						   		margin-right:5px;
-						 	 }
-						    strong{
-						    
-	  							  font: 700 34px tahoma,sans-serif;
-						  	  }
-						    .jiaspan{
-						    	padding: 4px 0px 0px;
-							    height: 18px;
-							    display: block;
-							    // font: 700 16px arial,hiragino sans gb,sans-serif;
-								line-height: 18px;
-								font-size: 16px;
-						  	  }
-						    del{
-						    		display: block;
-						    	    float: left;
-								    color: #999;
-								    font-weight: 700;
-								    font-size: 12px;
-						  	  }
-					  }
-					  
-					  .evaluate{
-						  	margin-top: 10px;
-						    padding-top: 10px;
-						    padding-bottom: 10px;
-						    border-top: 1px solid #EEE;
-						    border-bottom: 1px solid #EEE;
-						    clear: both;
+		    width: 1000px;
+		    margin: 0 auto;
+		    padding-top: 10px;
+		    padding-bottom: 40px;
+		    .top{	
+			    float: left;
+	   			margin-top: 0px;
+			   	width: 1000px;
+				height: auto;
+				font-size: 12px;
+				margin-bottom: 10px;
+					 ul{
+				 	    margin: 0;
+					    padding: 0;
+					    border: 1px solid #ddd;
+					    border-top: none;
+					    border-bottom: none;
+					    background: #fff;
+					    line-height: 18px;
+					    position: relative;
+					    top: -2px;
+					    left: -2px;
+					    line-height: 18px;
+					    li{
+					    	    padding: 10px 5px 10px 65px;
+							    border-bottom: 1px solid #ddd;
+							    border-top: 1px solid #ddd;
+							    position: relative;
+							   span{
+							   	    width: 60px;
+								    text-align: right;
+								    font-weight: bold;
+								    position: absolute;
+								    top: 12px;
+								    left: 0;
 
-						   	.ealu{
-						   		    color: #666;
-						   		    font-size: 12px;
-						   		    float:left;
-						   		    .star{
-								   		display: inline-block;
-									    width: 60px;
-									    height: 12px;
-									    overflow: hidden;
-									    background: url('../img/goods/star.png') no-repeat 0px 0px;
-									    margin-right: 5px;
-						  			 }
-						   	}
-						   	.person{
-						   		float:right;
-						   		font-size: 12px;
-						   		span{
-						   			color: #666;
-						   		}
-						   	}
-					  }
-					  .divder{
-					  	margin-bottom:10px;
-					  	padding-bottom:5px;
-
-					  }
-					  .buy{
-					  		position: relative;
-						  	a{
-						  		display:block;
-						  		float: left;
-						  		
-						  	}
-						  	button{
-						  		margin-left:10px;
-						  		border:0;
-						  		display: inline-block;
-							    text-indent: 169px;
-							    overflow: hidden;
-							    width: 129px;
-							    height: 50px;
-							    line-height: 50px;
-							    margin-right: 14px;
-							    background-image: url('../img/goods/gw.jpg');
-							    background-repeat: no-repeat;
-						  	}
-					  }
-					  .promise{
-					  	border-top: 1px solid #EEE;
-					    margin-top: 10px;
-					    padding-top: 5px;
-					    span{
-					    	margin-left:10px;
-    						display: inline-block;
-    						font-size: 12px;
-    						color:#666;
+							   }
+							   a{
+							   	    color: #38599E;
+								    display: inline-block;
+								    zoom: 1;
+								    padding: 0 2px;
+								    margin: 2px 15px 2px 0;
+								    text-decoration: none;
+							   }
 					    }
-					  }
-		    	}
+
+					    
+					 }
 		    }
-		}
+		    .home{
+		    	    margin-bottom: 20px;
+		    	    float: left;
+		    	    .list{
+		    	    	    width: 1000px;
+    						overflow: hidden;
+    						.listP{
+    							 width: 1020px;
+    							 li{
+    							 	    position: relative;
+									    float: left;
+									    width: 318px;
+									    height: 300px;
+									    margin: 0 20px 20px 0;
+									    border: 1px solid #e5e5e5;
+									    background-color: #FFF;
+									    
+									    font-family: "Arial";
+									    h4{
+									    	    width: 288px;
+											    height: 44px;
+											    line-height: 22px;
+											    margin: 10px 15px;
+											    font-size: 14px;
+											    font-weight: bold;
+											    color: #666;
+											    overflow: hidden;
+									    }
+									    .pic{
+									    	    position: relative;
+											    width: 288px;
+											    height: 190px;
+											    border: 1px solid #a51100;
+											    margin: 0 15px;
+											    overflow: hidden;
+											    .cc{
+											    	height: 190px;
+												    width: 299px;
+												    overflow: hidden;
+											    }
+									    }
+									    span{
+									    	padding:5px;
+									    	margin-left:10px;
+									    	float: left;
+									    	font-size: 12px;
+									    }
+									    h5{
+									    	margin-top:5px;
+									    	margin-right:30px;
+									    	font-size: 12px;
+									    	padding:5px;
+									    	float: right;
+									    	b{
+									    		color:red;
+									    	}
+									    }
+
+    							 }
+    							  .abchover{
+									box-shadow: 0 0 15px #9A9A9A;
+							   		 border: 1px solid #f6c688;
+								}
+    						}
+		    	    }
+		    }
+		    .nav{
+		    	width: 980px;
+			    padding: 0 10px;
+			    text-align: center;
+			    li{
+			    	display: inline;
+    				color: #666;
+			    }
+		    }
+
 	}
 }
 
 
-.gds-bigzoom img{
-	min-width:1000px;
-}
+
+
+
+
+
+
+
 
 
 

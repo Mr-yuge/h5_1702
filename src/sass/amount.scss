@@ -370,147 +370,138 @@ header{
 /*
  详情页样式
  */
-.bdw{
+
+
+#bdw{
 	background-color: #f7f7f7;
     margin-top: -6px;
-     border-bottom:1px solid #fff;
-	.bd{
+    .bd {
 	    width: 1000px;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 40px;
-		.Products{
-			// font-size: 12px;
-		    width: 958px;
-		    margin-right: 0px;
-		    margin-bottom: 15px;
-		    margin-left: 0px;
-		    background-color: #FFF;
-		    float: left;
-		    padding: 20px;
-		    border: 1px solid #dddddd;
-		    .title{
-				    margin-bottom: 10px;
-   					 padding-bottom: 5px;
-			    	li{
-			    		font-size: 20px;
-				    	color: #333;
-				    	padding: 0px;
-				    	margin: 0px 0px 15px;
-					}
-		    }
-		    .neirong1{
-		    	.lefttu{
-					    float: left;
-					   
-					    width: 440px;
-					    background-color: #FFF;
-						img{
-							 width:275px;  overflow:hidden
-						}
-		    	}
-		    	.rightnei{
-					    float: right;
-					    width: 460px;
-					    color: #d71e2a;
-					    background-color: #FFF;
-					  .price{
-						  	h3{
-						   		float:left;
-						   		margin-right:5px;
-						 	 }
-						    strong{
-						    
-	  							  font: 700 34px tahoma,sans-serif;
-						  	  }
-						    .jiaspan{
-						    	padding: 4px 0px 0px;
-							    height: 18px;
-							    display: block;
-							    // font: 700 16px arial,hiragino sans gb,sans-serif;
-								line-height: 18px;
-								font-size: 16px;
-						  	  }
-						    del{
-						    		display: block;
-						    	    float: left;
-								    color: #999;
-								    font-weight: 700;
-								    font-size: 12px;
-						  	  }
-					  }
-					  
-					  .evaluate{
-						  	margin-top: 10px;
-						    padding-top: 10px;
-						    padding-bottom: 10px;
-						    border-top: 1px solid #EEE;
-						    border-bottom: 1px solid #EEE;
-						    clear: both;
-
-						   	.ealu{
-						   		    color: #666;
-						   		    font-size: 12px;
-						   		    float:left;
-						   		    .star{
-								   		display: inline-block;
-									    width: 60px;
-									    height: 12px;
-									    overflow: hidden;
-									    background: url('../img/goods/star.png') no-repeat 0px 0px;
-									    margin-right: 5px;
-						  			 }
-						   	}
-						   	.person{
-						   		float:right;
-						   		font-size: 12px;
-						   		span{
-						   			color: #666;
-						   		}
-						   	}
-					  }
-					  .divder{
-					  	margin-bottom:10px;
-					  	padding-bottom:5px;
-
-					  }
-					  .buy{
-					  		position: relative;
-						  	a{
-						  		display:block;
-						  		float: left;
-						  		
-						  	}
-						  	button{
-						  		margin-left:10px;
-						  		border:0;
-						  		display: inline-block;
-							    text-indent: 169px;
-							    overflow: hidden;
-							    width: 129px;
-							    height: 50px;
-							    line-height: 50px;
-							    margin-right: 14px;
-							    background-image: url('../img/goods/gw.jpg');
-							    background-repeat: no-repeat;
-						  	}
-					  }
-					  .promise{
-					  	border-top: 1px solid #EEE;
-					    margin-top: 10px;
-					    padding-top: 5px;
-					    span{
-					    	margin-left:10px;
-    						display: inline-block;
-    						font-size: 12px;
-    						color:#666;
+	    margin: 0 auto;
+	    padding-top: 10px;
+	    padding-bottom: 40px;
+	    .shopping{
+	    	    width: 1000px;
+			    padding-top: 10px;
+			    margin-bottom: 20px;
+			    .shop{
+			    		width: 1000px;
+					    height: 30px;
+					    background: url('../img/toubu/shop.png') repeat-x left center;
+					    margin-bottom: 60px;
+					    li{
+					    	float: left;
+						    width: 330px;
+						    text-align: center;
+						    padding-top: 35px;
+						    color: #555;
+						    background-image: url('../img/toubu/li.png');
+						    background-repeat: no-repeat;
+						    font-size: 12px;
 					    }
-					  }
-		    	}
-		    }
-		}
+					    .mu01{
+					    	    background-position: 152px 5px;
+					    }
+					    .mu02{
+					    	    background-position: 152px -55px;
+					    }
+					    .mu03{
+					    	    background-position: 152px -115px;
+					    }
+			    }
+			   	.shoptable{
+			   		    width: 998px;
+					    border: 1px solid #e2dee2;
+					    margin-bottom: 20px;
+					    th{
+					    	border: 1px solid #e2dee2;
+						   	font-size: 12px;
+						    line-height: 20px;
+						    color: #5e5058;
+						    text-align: center;
+						    padding: 5px 10px;
+						    background-color: #faf7f8;
+						    font-weight: bold
+					    }
+					    td{
+					    	    border:1px solid #e2dee2;
+							    padding:10px;
+							    background-color:#FFF;
+							    text-align:center;
+							    a{
+							    	    text-decoration: none;
+   										 color: #555;
+							    }
+							    .select{
+								    display: block;
+								    height: 26px;
+								    line-height: 24px;
+			   					}
+					   			.add,.reduce{
+					   				text-align: center;
+								    width: 12px;
+								    height: 22px;
+								    border: 1px solid #ccc;
+								    line-height: 22px;
+								    background-color: #CCC;
+					   			}
+					   			.inp4{
+					   				width: 40px;
+					   				height: 22px;
+					   				text-align: center;
+					   			}
+					   			input{
+					   				float: left;
+					   			}
+
+					   			.font{
+					   				margin-left: 20px;
+					   				span{
+					   					color:red;
+					   				}
+					   			}
+						}
+						.align{
+					   				text-align: right;
+					   			}
+						
+				}
+				.clear{
+					    width: 340px;
+					    float: right;
+					    margin-bottom: 30px;
+					    margin-right: 30px;
+					    .btn1{
+					    	    
+					    	background: url('../img/dibu/goshop.png') no-repeat;
+   							 margin-left: 30px;
+   							     float: left;
+						    display: inline-block;
+						    width: 140px;
+						    height: 39px;
+						    // background: url(images/sh_buy_01.png) no-repeat;
+						    text-align: center;
+						    text-indent: -9999px;
+						    border: none;
+					    }
+					    .btn2{
+					    	   
+					    	background: url('../img/dibu/goshop1.png') no-repeat;
+   							 margin-left: 30px;
+   							    float: right;
+							    display: inline-block;
+							    width: 140px;
+							    height: 39px;
+							    // background: url(images/sh_buy_01.png) no-repeat;
+							    text-align: center;
+							    text-indent: -9999px;
+							    border: none;
+					    }
+				}
+	  		  }
 	}
 }
+
 
 
 .gds-bigzoom img{

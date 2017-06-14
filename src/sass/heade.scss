@@ -1418,7 +1418,6 @@ header{
 	楼梯效果样式
 	
  */	
-
 #rightbar{
 	    width: 300px;
 	    height: 100%;
@@ -1428,12 +1427,7 @@ header{
 	    z-index: 9999;
 	    background-color: #FFF;
 		.geren{
-			position: fixed;
-		    width: 36px;
-		    height: 100%;
-		    float: left;
-		    top: 0px;
-		    z-index: 1200;
+			
 		   a{
 		   	text-decoration:none;
 		   }
@@ -1514,13 +1508,55 @@ header{
 		    }
 		}
 		.right{
-			background-attachment: scroll;
-		    background-color: transparent;
-		    background-image: url('../img/gouwu/666.gif');
-		    background-repeat: no-repeat;
-		    background-position: 45% center;
-		    width: 260px;
-    		overflow: auto;
-    		height: 100%;
+			h4{
+				height: 41px;
+				    line-height: 41px;
+				    font-size: 14px;
+				    border-bottom: 1px solid #E5E5E5;
+				    margin: 0px 20px 0px 5px;
+				    // color:red;
+			}
+			li{
+					position: relative;
+				    padding: 15px 0px;
+    				border-bottom: 1px dashed #CCC;
+				h4{
+				height: 41px;
+				    line-height: 41px;
+				    font-size: 14px;
+				    border-bottom: 1px solid #E5E5E5;
+				    margin: 0px 20px 0px 5px;
+				    color:red;
+				}
+				span{
+					position: absolute;
+					right:0;
+					top:0;
+					padding:5px;
+					&:hover{
+						background-color:#f00;color:#fff;
+					}
+				}	
+			}
+			.fudong{
+				color: #F64E68;
+				
+
+			}
+			img{
+					float: left;
+				    border: 1px solid #DDD;
+				    padding: 2px;
+				    margin: 0px 10px 0px 0px;
+				    width: 68px;
+				    height: 50px;
+			}
+			p{
+					font-size: 14px;
+				    line-height: 20px;
+				    height: 40px;
+				    overflow: hidden;
+				    margin-top:12px;
+			}
 		}
 }	

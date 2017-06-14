@@ -1,6 +1,6 @@
 require(['config'],function(){
 
-	require(['jquery','gdszoom','lunbotu'],function($,gds,lbt){
+	require(['jquery','gdszoom','lunbotu','common'],function($,gds,lbt){
 		var data = location.search.substring(1);
 
 		// var acc = data.split('&');
@@ -59,12 +59,13 @@ require(['config'],function(){
 			}
 		})
 
-
+		var b;
 		// 表头移入事件
 		$('#qkln a').hover(
 				function(){
 					// console.log($(this).find('dd'))
-					$(this).find('b').addClass('hover');
+				b= $(this).find('b')
+					b.addClass('hover');
 				$(this).next().show();
 				
 				},
@@ -74,7 +75,7 @@ require(['config'],function(){
 				}
 				
 			);
-		
+		console.log(b)
 		//轮播图的插件
 		$('.lunbo').lxCarousel({
 			imgs:['img/toubu/001.jpg','img/toubu/002.jpg','img/toubu/003.jpg','img/toubu/004.jpg'],
@@ -621,8 +622,254 @@ require(['config'],function(){
 
 
 
+			var qfy = 1;
+
+		var ind = 0;
+		// 下面的代码是飞入购物车效果
+		var $goodsList = $('.imgtu');
+		var $buy = $('.buy');
+		var $right = $('.right ul');
+		var $title = $('.title p');
+		var $idx = $('#BarCart');
+		
+		var setli = $right[0];
+		// var getli = setli.children;
+		
+		var $topright = $('.topright strong');
+		
+		
 
 
+
+
+
+
+		//添加cookie
+		var goodslist = getCookie('goodslist')
+		goodslist = goodslist ? JSON.parse(goodslist) : [];
+		
+
+
+
+		$right.html(goodslist.map(function(item){
+				
+					ind += item.qty;
+               		return `<li data-guid=${item.guid}>
+								<img src="${item.imgurl}">
+								<p>${item.name}</p>
+								<h4>￥${item.price}&times;${item.qty}</h4>
+								<span class="btn-close">&times;</span>
+
+
+               		`
+
+               	}).join(''));
+
+		$idx.html(ind);
+		$topright.html(ind);
+		// console.log(ind);
+
+
+
+
+
+		$buy.on('click','button',function(){
+			var $img = $goodsList.children('img');
+			var $cloneImg2 = $img.clone();
+			
+			for(var i=0;i<goodslist.length;i++){
+				if(goodslist[i].guid == $setid){
+						
+						goodslist[i].qty++;			
+						break;		
+					
+				}
+			}
+			
+			if(i ==goodslist.length){
+				// console.log(666);
+				var goods = {
+							guid:$setid,
+							imgurl:$imgurl,
+							name:$spname,
+							price:$qian,
+							qty:1
+						};
+						
+				goodslist.push(goods);
+
+			}	
+				// console.log(goodslist);
+			setCookie('goodslist',JSON.stringify(goodslist));
+			
+
+			var $cloneImg = $img.clone();
+			var $li = $title.clone();
+			 $cloneImg.css({
+                    position:'absolute',
+                    left:$img.offset().left,
+                    top:$img.offset().top,
+                    width:$img.outerWidth(),
+                    height:$img.outerHeight()
+                }).appendTo('body');
+
+			var $span = $('<span/>').html('&times;');
+			 
+			  $cloneImg.animate({
+                    left:$right.offset().left,
+                    top:$right.offset().top + $right.outerHeight(),
+                    width:10,
+                    height:10
+                },function(){
+                ind++;
+              $right.html(goodslist.map(function(item){
+              		
+               		return `<li data-guid=${item.guid}>
+								<img src="${item.imgurl}">
+								<p>${item.name}</p>
+								<h4>￥${item.price}&times;${item.qty}</h4>
+								<span class="btn-close">&times;</span>
+
+
+               		`
+               		
+               	}).join(''));
+                	$idx.html(ind);
+					$topright.html(ind);
+                
+                   // 删除动画图片
+                   $cloneImg.remove();
+                });
+			
+		});
+		
+		
+
+		// console.log(goodslist);
+
+		$right.on('click','span',function(){
+			var $culist = this.parentNode;
+			
+		
+			var guid = $culist.getAttribute('data-guid');
+				
+			for(var i=0;i<goodslist.length;i++){
+				if(goodslist[i].guid === guid){
+					
+					goodslist.splice(i,1);
+					setCookie('goodslist',JSON.stringify(goodslist));
+					location.reload();
+					break;
+				}
+			}
+
+			$culist.remove();
+		
+		})
+
+		var $width = $('#dialog').outerWidth();
+		var $height = $('#dialog').outerHeight();
+
+		
+
+			var $datalist = $('.shoptable tbody');
+			var $goshop;
+			var $tr;
+
+
+		
+			
+		
+
+		
+		
+		var xiaoji = $('.xiaoji');
+		var reduce = $('.reduce');
+		var syQty;
+		var jiaQty;
+		var qian = $('.qian');
+		var total = $('.total');
+		var $total1;
+		var $total2;
+		reduce.on('click',function(){
+			syQty = 0;
+			$total1 = 0;
+			var $next = $(this).next();
+			// console.log($next);
+			var $culist = this.parentNode.parentNode.parentNode;
+			var jisuan = $culist.children;
+			console.log(jisuan);
+			
+			var guid = $culist.getAttribute('data-id');
+				for(var i=0;i<goodslist.length;i++){
+
+					if(goodslist[i].guid === guid){
+						
+						goodslist[i].qty--;
+						
+						setCookie('goodslist',JSON.stringify(goodslist));
+						$next.val(goodslist[i].qty);
+						// xiaoji.html(goods.price*goodslist[i].qty)
+						break;
+					}
+				}	
+
+				for(var i=0;i<goodslist.length;i++){
+					syQty +=goodslist[i].qty ;
+					$total1+= goodslist[i].price * goodslist[i].qty;
+					if(goodslist[i].qty <= 0){
+						
+						goodslist.splice(i,1);
+						setCookie('goodslist',JSON.stringify(goodslist));
+						$culist.remove();
+					break;
+					}
+				}
+				qian.html(syQty);
+				total.html($total1.toFixed(2)*1);
+
+				$idx.text(syQty);
+				$topright.text(syQty);
+		});
+		var $right = $('.right');
+		$right.html(goodslist.map(function(item){
+              		
+               		return `<li data-guid=${item.guid}>
+								<img src="${item.imgurl}">
+								<p>${item.name}</p>
+								<h4>￥${item.price}&times;${item.qty}</h4>
+								<span class="btn-close">&times;</span>
+
+
+               		`
+               		
+               	}).join(''));
+		$right.on('click','span',function(){
+			var $culist = this.parentNode;
+			
+		
+			var guid = $culist.getAttribute('data-guid');
+				
+			for(var i=0;i<goodslist.length;i++){
+				if(goodslist[i].guid === guid){
+					
+					goodslist.splice(i,1);
+					setCookie('goodslist',JSON.stringify(goodslist),'Session','/');
+					
+					break;
+				}
+			}
+
+			$culist.remove();
+		
+		})
+		console.log(666)
+		console.log($('.qklogins'))
+		$('.qklogins').on('mouseenter','dd',function(){
+			$(this).show();
+		}).on('mouseleave','dd',function(){
+			$(this).hide();
+		})
 
 	})
 })

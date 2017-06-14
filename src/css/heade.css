@@ -1079,85 +1079,109 @@ header {
   top: 0px;
   z-index: 9999;
   background-color: #FFF; }
-  #rightbar .geren {
-    position: fixed;
+  #rightbar .geren a {
+    text-decoration: none; }
+  #rightbar .geren .heise {
+    position: absolute;
+    left: -36px;
+    top: 0px;
     width: 36px;
     height: 100%;
-    float: left;
-    top: 0px;
-    z-index: 1200; }
-    #rightbar .geren a {
-      text-decoration: none; }
-    #rightbar .geren .heise {
-      position: absolute;
-      left: -36px;
-      top: 0px;
-      width: 36px;
-      height: 100%;
-      border-right: 1px solid #CECECE;
-      background-attachment: scroll;
-      background-color: #000000;
-      background-image: none;
-      background-repeat: repeat;
-      background-position: 0% 0%; }
-      #rightbar .geren .heise .yahei {
-        width: 36px;
-        position: absolute;
-        left: 0px;
-        top: 30%;
-        z-index: 10; }
-        #rightbar .geren .heise .yahei .beijing {
-          background-color: #a90a0a; }
-        #rightbar .geren .heise .yahei a {
-          text-align: center;
-          display: block;
-          color: #555;
-          position: relative;
-          margin-bottom: 10px;
-          padding-top: 8px;
-          padding-right: 4px;
-          padding-bottom: 8px;
-          padding-left: 4px; }
-          #rightbar .geren .heise .yahei a i {
-            display: block;
-            width: 25px;
-            height: 25px;
-            margin: 0px auto;
-            background-attachment: scroll;
-            background-color: transparent;
-            background-image: url("../img/gouwu/tubiao.png");
-            background-repeat: no-repeat; }
-          #rightbar .geren .heise .yahei a span {
-            margin-top: 5px;
-            display: block;
-            line-height: 20px;
-            font-family: "宋体";
-            color: #FFFFFF;
-            font-size: 12px; }
-          #rightbar .geren .heise .yahei a #BarCart {
-            display: inline-block;
-            width: 20px;
-            line-height: 20px;
-            border-radius: 50%;
-            color: #FFFFFF;
-            background-attachment: scroll;
-            background-color: #a90a0a;
-            background-image: none;
-            background-repeat: repeat;
-            background-position: 0% 0%;
-            margin-top: 3px; }
-          #rightbar .geren .heise .yahei a .n2 {
-            background-position: 0px -25px; }
-          #rightbar .geren .heise .yahei a .n3 {
-            background-position: 0px -50px; }
-          #rightbar .geren .heise .yahei a .n4 {
-            background-position: 0px -75px; }
-  #rightbar .right {
+    border-right: 1px solid #CECECE;
     background-attachment: scroll;
-    background-color: transparent;
-    background-image: url("../img/gouwu/666.gif");
-    background-repeat: no-repeat;
-    background-position: 45% center;
-    width: 260px;
-    overflow: auto;
-    height: 100%; }
+    background-color: #000000;
+    background-image: none;
+    background-repeat: repeat;
+    background-position: 0% 0%; }
+    #rightbar .geren .heise .yahei {
+      width: 36px;
+      position: absolute;
+      left: 0px;
+      top: 30%;
+      z-index: 10; }
+      #rightbar .geren .heise .yahei .beijing {
+        background-color: #a90a0a; }
+      #rightbar .geren .heise .yahei a {
+        text-align: center;
+        display: block;
+        color: #555;
+        position: relative;
+        margin-bottom: 10px;
+        padding-top: 8px;
+        padding-right: 4px;
+        padding-bottom: 8px;
+        padding-left: 4px; }
+        #rightbar .geren .heise .yahei a i {
+          display: block;
+          width: 25px;
+          height: 25px;
+          margin: 0px auto;
+          background-attachment: scroll;
+          background-color: transparent;
+          background-image: url("../img/gouwu/tubiao.png");
+          background-repeat: no-repeat; }
+        #rightbar .geren .heise .yahei a span {
+          margin-top: 5px;
+          display: block;
+          line-height: 20px;
+          font-family: "宋体";
+          color: #FFFFFF;
+          font-size: 12px; }
+        #rightbar .geren .heise .yahei a #BarCart {
+          display: inline-block;
+          width: 20px;
+          line-height: 20px;
+          border-radius: 50%;
+          color: #FFFFFF;
+          background-attachment: scroll;
+          background-color: #a90a0a;
+          background-image: none;
+          background-repeat: repeat;
+          background-position: 0% 0%;
+          margin-top: 3px; }
+        #rightbar .geren .heise .yahei a .n2 {
+          background-position: 0px -25px; }
+        #rightbar .geren .heise .yahei a .n3 {
+          background-position: 0px -50px; }
+        #rightbar .geren .heise .yahei a .n4 {
+          background-position: 0px -75px; }
+  #rightbar .right h4 {
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+    border-bottom: 1px solid #E5E5E5;
+    margin: 0px 20px 0px 5px; }
+  #rightbar .right li {
+    position: relative;
+    padding: 15px 0px;
+    border-bottom: 1px dashed #CCC; }
+    #rightbar .right li h4 {
+      height: 41px;
+      line-height: 41px;
+      font-size: 14px;
+      border-bottom: 1px solid #E5E5E5;
+      margin: 0px 20px 0px 5px;
+      color: red; }
+    #rightbar .right li span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 5px; }
+      #rightbar .right li span:hover {
+        background-color: #f00;
+        color: #fff; }
+  #rightbar .right .fudong {
+    color: #F64E68; }
+  #rightbar .right img {
+    float: left;
+    border: 1px solid #DDD;
+    padding: 2px;
+    margin: 0px 10px 0px 0px;
+    width: 68px;
+    height: 50px; }
+  #rightbar .right p {
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 12px; }

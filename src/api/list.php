@@ -1,4 +1,4 @@
-<?php
+	<?php
 	$servername = 'localhost';
 	$username = 'root';
 	$password = '';
@@ -18,13 +18,13 @@
 
 
 	$page = isset($_GET['page']) ? $_GET['page'] : 1;
-	$qty = isset($_GET['qty']) ? $_GET['qty'] : 10;
+	$qty = isset($_GET['qty']) ? $_GET['qty'] : 9;
 
 
 
 
 	//查询数据库
-	$sql = "select * from good limit ".($page-1)*$qty.",".$qty;
+	$sql = "select * from list limit ".($page-1)*$qty.",".$qty;
 	// echo $sql;
 	//获取查询结果
 	$res = $conn->query($sql);
@@ -35,7 +35,7 @@
 	$result = array(
 			'page'=>$page,
 			'qty'=>$qty,
-			'total'=>$conn->query('select count(*) from good')->fetch_row()[0],
+			'total'=>$conn->query('select count(*) from list')->fetch_row()[0],
 			'data'=>$row,
 
 		);
