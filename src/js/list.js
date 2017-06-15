@@ -3,7 +3,7 @@ require(['config'],function(){
 	require(['jquery','gdszoom','lunbotu','common'],function($,gds,lbt){
 		var data = location.search.substring(1);
 
-		// var acc = data.split('&');
+		// 通过网址获取传来name参数写入到页面
 		var temp = data.split('=');
 		if(data !== ''){
 				var $span = $('<span/>');
@@ -45,7 +45,7 @@ require(['config'],function(){
 		})
 
 
-
+		// 右边购物车菜单点入点出效果
 		$('.tebei').on('click',function(){
 			var $parent = $(this).closest('#rightbar');
 			
@@ -97,8 +97,7 @@ require(['config'],function(){
 		// console.log(lbt.lxCarousel)
 		// 第一行的商品信息
 		
-			// var title = $title.get(0);
-			// console.log($('.title1').scrolTop());
+		
 		$(window).scroll(function(){
 			// var $title = $('.title')
 			var $top = $(window).scrollTop();
@@ -673,75 +672,75 @@ require(['config'],function(){
 
 
 
-		$buy.on('click','button',function(){
-			var $img = $goodsList.children('img');
-			var $cloneImg2 = $img.clone();
+		// $buy.on('click','button',function(){
+		// 	var $img = $goodsList.children('img');
+		// 	var $cloneImg2 = $img.clone();
 			
-			for(var i=0;i<goodslist.length;i++){
-				if(goodslist[i].guid == $setid){
+		// 	for(var i=0;i<goodslist.length;i++){
+		// 		if(goodslist[i].guid == $setid){
 						
-						goodslist[i].qty++;			
-						break;		
+		// 				goodslist[i].qty++;			
+		// 				break;		
 					
-				}
-			}
+		// 		}
+		// 	}
 			
-			if(i ==goodslist.length){
-				// console.log(666);
-				var goods = {
-							guid:$setid,
-							imgurl:$imgurl,
-							name:$spname,
-							price:$qian,
-							qty:1
-						};
+		// 	if(i ==goodslist.length){
+		// 		// console.log(666);
+		// 		var goods = {
+		// 					guid:$setid,
+		// 					imgurl:$imgurl,
+		// 					name:$spname,
+		// 					price:$qian,
+		// 					qty:1
+		// 				};
 						
-				goodslist.push(goods);
+		// 		goodslist.push(goods);
 
-			}	
-				// console.log(goodslist);
-			setCookie('goodslist',JSON.stringify(goodslist));
+		// 	}	
+		// 		// console.log(goodslist);
+		// 	setCookie('goodslist',JSON.stringify(goodslist));
 			
 
-			var $cloneImg = $img.clone();
-			var $li = $title.clone();
-			 $cloneImg.css({
-                    position:'absolute',
-                    left:$img.offset().left,
-                    top:$img.offset().top,
-                    width:$img.outerWidth(),
-                    height:$img.outerHeight()
-                }).appendTo('body');
+		// 	var $cloneImg = $img.clone();
+		// 	var $li = $title.clone();
+		// 	 $cloneImg.css({
+  //                   position:'absolute',
+  //                   left:$img.offset().left,
+  //                   top:$img.offset().top,
+  //                   width:$img.outerWidth(),
+  //                   height:$img.outerHeight()
+  //               }).appendTo('body');
 
-			var $span = $('<span/>').html('&times;');
+		// 	var $span = $('<span/>').html('&times;');
 			 
-			  $cloneImg.animate({
-                    left:$right.offset().left,
-                    top:$right.offset().top + $right.outerHeight(),
-                    width:10,
-                    height:10
-                },function(){
-                ind++;
-              $right.html(goodslist.map(function(item){
+		// 	  $cloneImg.animate({
+  //                   left:$right.offset().left,
+  //                   top:$right.offset().top + $right.outerHeight(),
+  //                   width:10,
+  //                   height:10
+  //               },function(){
+  //               ind++;
+  //             $right.html(goodslist.map(function(item){
               		
-               		return `<li data-guid=${item.guid}>
-								<img src="${item.imgurl}">
-								<p>${item.name}</p>
-								<h4>￥${item.price}&times;${item.qty}</h4>
-								<span class="btn-close">&times;</span>
+  //              		return `<li data-guid=${item.guid}>
+		// 						<img src="${item.imgurl}">
+		// 						<p>${item.name}</p>
+		// 						<h4>￥${item.price}&times;${item.qty}</h4>
+		// 						<span class="btn-close">&times;</span>
 
 
-               		`
+  //              		`
                		
-               	}).join(''));
-                	$idx.html(ind);
-					$topright.html(ind);
+  //              	}).join(''));
+  //               	$idx.html(ind);
+		// 			$topright.html(ind);
                 
-                   // 删除动画图片
-                   $cloneImg.remove();
-                });
+  //                  // 删除动画图片
+  //                  $cloneImg.remove();
+  //               });
 			
-		});
+		// });
 		
 		
 
