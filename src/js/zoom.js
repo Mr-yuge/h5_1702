@@ -325,7 +325,7 @@ require(['config'],function(){
 						</td>
 						<td>${goods.price}</td>
 						<td>0</td>
-						<td class="xiaoji">${goods.price*goods.qty}</td>
+						<td class="xiaoji">${(goods.price*goods.qty).toFixed(2)*1}</td>
 						<td><a href="#" class="haha">删除</a></td>
 				</tr>`
 				}).join('');
@@ -352,7 +352,8 @@ require(['config'],function(){
 		var $total3;
 		var $srong =$('.shuL');
 		var xixi =$('.haha');
-		console.log($('.haha'))
+			var strong = $('.topright strong');
+			console.log(strong);
 		xixi.on('click',function(){
 			$total3 = 0;
 			shanQty=0;
@@ -385,7 +386,9 @@ require(['config'],function(){
 				
 				$idx.text(shanQty);
 				$topright.text(jiaQty);
-				$srong.html(shanQty);
+				console.log($srong);
+
+				strong.html(shanQty);
 			$culist.remove();
 		})
 
