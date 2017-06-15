@@ -184,8 +184,8 @@ require(['config'],function(){
 					
 
 				}else{
-					if(! /^\S{1,19}$/.test(_password)){
-						
+					if(! /^\S{6,19}$/.test(_password)){
+						console.log(666);
 						$(this).parent('dd').find('p').remove();
 						var $p1 = $('<p/>').attr({class:'biaoqian'});
 						$p1.html('您输入的密码有误');

@@ -177,6 +177,8 @@ textarea {
   background-color: #f7f7f7; }
   .ftw a {
     font-size: 12px; }
+  .ftw ul {
+    margin-left: 20px; }
   .ftw .fw {
     width: 1000px;
     margin: 0 auto; }
