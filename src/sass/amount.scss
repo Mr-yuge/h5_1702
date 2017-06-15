@@ -36,11 +36,16 @@ header{
 		 	line-height:12px;
 		 	margin-top:10px;
 		 	margin-left:10px;
+		 	img{margin-top: -10px;}
 		
 				a{margin:10px;
 					text-decoration:none;
 		
 				}		
+		}
+		.xing{
+			border:0;
+			margin-left:0px;
 		}
 		.welcome{
 			border:0;
@@ -103,7 +108,9 @@ header{
 					margin-top:10px;
 					line-height:12px;
 					float:left;
-					
+					img{
+						margin-top:-10px;
+					}
 					span{margin:10px;}
 					a{margin:10px;
 					text-decoration:none;

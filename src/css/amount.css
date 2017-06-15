@@ -55,9 +55,14 @@ header {
         line-height: 12px;
         margin-top: 10px;
         margin-left: 10px; }
+        header #toubu .topleft li img {
+          margin-top: -10px; }
         header #toubu .topleft li a {
           margin: 10px;
           text-decoration: none; }
+      header #toubu .topleft .xing {
+        border: 0;
+        margin-left: 0px; }
       header #toubu .topleft .welcome {
         border: 0; }
         header #toubu .topleft .welcome span {
@@ -103,6 +108,8 @@ header {
       margin-top: 10px;
       line-height: 12px;
       float: left; }
+      header .topright ul li img {
+        margin-top: -10px; }
       header .topright ul li span {
         margin: 10px; }
       header .topright ul li a {
