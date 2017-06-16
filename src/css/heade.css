@@ -46,6 +46,8 @@ header {
     width: 1000px;
     height: 100%;
     margin: 0 auto; }
+    header #toubu a {
+      color: #555; }
     header #toubu .topleft {
       float: left; }
       header #toubu .topleft li {

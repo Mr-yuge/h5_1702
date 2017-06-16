@@ -30,9 +30,18 @@ require(['config'],function(){
 
 
 
+		var shopkeyword = $('.shopkeyword');
+		shopkeyword.on('mouseenter','a',function(){
+			$(this).css({color:'red'});
+		}).on('mouseleave','a',function(){
+			$(this).css({color:'#999'});
+		})
+
 		
 
 
+
+		// 给a标签添加颜色
 		var res = false;
 		$('.heise').on('mouseenter','a',function(){
 

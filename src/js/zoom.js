@@ -72,7 +72,18 @@ require(['config'],function(){
 			}
 		})
 		
-		// console.log($qian)
+	
+
+			var shopkeyword = $('.shopkeyword');
+		shopkeyword.on('mouseenter','a',function(){
+			$(this).css({color:'red'});
+		}).on('mouseleave','a',function(){
+			$(this).css({color:'#999'});
+		})
+
+
+		
+
 		
 		$('.heise').on('mouseenter','a',function(){
 
@@ -353,7 +364,7 @@ require(['config'],function(){
 		var $srong =$('.shuL');
 		var xixi =$('.haha');
 			var strong = $('.topright strong');
-			console.log(strong);
+			// console.log(strong);
 		xixi.on('click',function(){
 			$total3 = 0;
 			shanQty=0;
@@ -363,7 +374,7 @@ require(['config'],function(){
 			var xiaoji = this.parentNode.parentNode;
 			
 			var guid = $culist.getAttribute('data-id');
-			console.log(guid);
+			// console.log(guid);
 			for(var i=0;i<goodslist.length;i++){
 				if(goodslist[i].guid === guid){
 					
@@ -386,7 +397,7 @@ require(['config'],function(){
 				
 				$idx.text(shanQty);
 				$topright.text(jiaQty);
-				console.log($srong);
+				// console.log($srong);
 
 				strong.html(shanQty);
 			$culist.remove();
@@ -567,7 +578,7 @@ require(['config'],function(){
 		}
 		
 
-		console.log($('.home li'))
+		// console.log($('.home li'))
 		$('.home li').hover(
 
 			function(){

@@ -34,7 +34,7 @@ require(['config'],function(){
 			async:false,	
 			
 			success:function(res){
-				console.log(res)
+			
 				arr= JSON.parse(res);
 						
 			}
@@ -142,7 +142,7 @@ require(['config'],function(){
 							res2 = true;
 							
 							arr.forEach(function(item){
-								console.log(item.username);
+								
 								if(item.username === $username.val()){
 									
 									$this.parent('dd').find('p').remove();
@@ -185,7 +185,7 @@ require(['config'],function(){
 
 				}else{
 					if(! /^\S{6,19}$/.test(_password)){
-						console.log(666);
+					
 						$(this).parent('dd').find('p').remove();
 						var $p1 = $('<p/>').attr({class:'biaoqian'});
 						$p1.html('您输入的密码有误');
@@ -263,7 +263,7 @@ require(['config'],function(){
 		
 				res5 = true;
 			}
-		
+			console.log(res5);
 			if($(this).find('input').val() === ''){
 				return;
 			}
